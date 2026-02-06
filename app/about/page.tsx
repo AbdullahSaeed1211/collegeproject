@@ -1,4 +1,6 @@
 import React from "react";
+
+export const dynamic = 'force-dynamic';
 import Link from "next/link";
 import type { Metadata, Viewport } from "next";
 import { Button } from "@/components/ui/button";
@@ -9,26 +11,26 @@ import { defaultViewport } from "@/lib/meta-config";
 export const viewport: Viewport = defaultViewport;
 
 export const metadata: Metadata = {
-  title: "About Brainwise | Brain Health Platform",
+  title: "About Care4Brain | Brain Health Platform",
   description: "Our mission is to make brain health analysis accessible to everyone through innovative AI-powered tools and evidence-based approaches.",
-  keywords: "about brainwise, brain health mission, cognitive health team, brain science, neurological wellbeing",
+  keywords: "about care4brain, brain health mission, cognitive health team, brain science, neurological wellbeing",
   openGraph: {
-    title: "About Brainwise | Brain Health Platform",
+    title: "About Care4Brain | Brain Health Platform",
     description: "Our mission is to make brain health analysis accessible to everyone through innovative AI-powered tools and evidence-based approaches.",
-    url: "https://brainwise-sigma.vercel.app/about",
+    url: "https://care4brain-sigma.vercel.app/about",
     type: "website",
     images: [
       {
         url: "/images/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "About Brainwise"
+        alt: "About Care4Brain"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Brainwise | Brain Health Platform",
+    title: "About Care4Brain | Brain Health Platform",
     description: "Our mission is to make brain health analysis accessible to everyone through innovative AI-powered tools and evidence-based approaches.",
     images: ["/images/og-about.jpg"]
   },
@@ -44,7 +46,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-5xl space-y-8">
         <div className="space-y-2 text-center">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            About Brainwise
+            About Care4Brain
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
             Our mission is to make brain health analysis accessible to everyone through innovative AI-powered tools.
@@ -53,7 +55,7 @@ export default function AboutPage() {
 
         <div className="prose dark:prose-invert max-w-none space-y-6">
           <p className="lead text-lg text-muted-foreground">
-            Brainwise was founded with a simple yet powerful mission: to leverage artificial intelligence to improve brain health outcomes worldwide. By making advanced diagnostic tools accessible to everyone, we aim to empower individuals to take control of their neurological wellbeing.
+            Care4Brain was founded with a simple yet powerful mission: to leverage artificial intelligence to improve brain health outcomes worldwide. By making advanced diagnostic tools accessible to everyone, we aim to empower individuals to take control of their neurological wellbeing.
           </p>
         </div>
 
@@ -103,7 +105,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Brainwise was developed by a multidisciplinary team of medical professionals, data scientists, and software engineers passionate about improving healthcare through technology. Our team combines expertise in:
+                Care4Brain was developed by a multidisciplinary team of medical professionals, data scientists, and software engineers passionate about improving healthcare through technology. Our team combines expertise in:
               </p>
               <ul className="mt-4 space-y-2 text-sm">
                 <li className="flex items-start">
@@ -175,7 +177,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Brainwise is designed to be an educational and screening tool, not a replacement for professional medical advice. Our services provide:
+                Care4Brain is designed to be an educational and screening tool, not a replacement for professional medical advice. Our services provide:
               </p>
               <ul className="mt-4 space-y-2 text-sm">
                 <li className="flex items-start">

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -6,8 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export const metadata: Metadata = {
-  title: "Login | Brainwise",
-  description: "Login to your Brainwise account",
+  title: "Login | Care4Brain",
+  description: "Login to your Care4Brain account",
 };
 
 export default function LoginPage() {

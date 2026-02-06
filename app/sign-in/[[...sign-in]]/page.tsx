@@ -1,9 +1,11 @@
+export const dynamic = "force-dynamic";
+
 import { SignIn } from "@clerk/nextjs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign In | Brainwise",
-  description: "Sign in to your Brainwise account",
+  title: "Sign In | Care4Brain",
+  description: "Sign in to your Care4Brain account",
 };
 
 export default function SignInPage() {

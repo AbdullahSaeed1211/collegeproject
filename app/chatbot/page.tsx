@@ -1,9 +1,11 @@
+export const dynamic = "force-dynamic";
+
 import { Chatbot } from "@/components/chatbot";
 import { SampleQuestionButton } from "./client-components";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Brain Health Chatbot | Brainwise",
+  title: "Brain Health Chatbot | Care4Brain",
   description: "Chat with our AI assistant about brain health, neurological conditions, and cognitive wellness.",
 };
 

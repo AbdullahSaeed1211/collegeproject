@@ -8,11 +8,11 @@ import { uploadFile } from '@uploadcare/upload-client';
 export async function uploadToUploadcare(fileBuffer: Buffer, fileName: string, mimeType: string) {
   try {
     // Convert Buffer to Blob for uploadcare client
-    const blob = new Blob([fileBuffer], { type: mimeType });
-    
+    const blob = new Blob([new Uint8Array(fileBuffer)], { type: mimeType });
+
     // Create a File object from the blob
     const file = new File([blob], fileName, { type: mimeType });
-    
+
     // Upload file to Uploadcare
     const result = await uploadFile(file, {
       publicKey: process.env.UPLOADCARE_PUBLIC_KEY || '',
@@ -21,11 +21,11 @@ export async function uploadToUploadcare(fileBuffer: Buffer, fileName: string, m
         contentType: mimeType
       }
     });
-    
+
     if (!result.uuid) {
       throw new Error('Upload failed: No UUID returned');
     }
-    
+
     return {
       uuid: result.uuid,
       cdnUrl: `https://ucarecdn.com/${result.uuid}/`,

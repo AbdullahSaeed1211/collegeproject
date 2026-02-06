@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'BrainWise.pro - Advanced brain health monitoring and assessments'
+export const alt = 'Care4Brain.pro - Advanced brain health monitoring and assessments'
 export const size = {
   width: 1200,
   height: 630,
@@ -64,7 +64,7 @@ export default async function Image() {
               fill="#3b82f6"
             />
           </svg>
-          <span style={{ fontWeight: 'bold' }}>BrainWise.pro</span>
+          <span style={{ fontWeight: 'bold' }}>Care4Brain.pro</span>
         </div>
         <div style={{ fontSize: '28px', textAlign: 'center', maxWidth: '700px' }}>
           Advanced brain health monitoring and assessment platform

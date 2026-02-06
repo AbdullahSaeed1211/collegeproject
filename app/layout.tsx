@@ -20,39 +20,39 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Brainwise: Stroke Risk & Brain Health Platform",
-    template: "%s | Brainwise"
+    default: "Care4Brain: Stroke Risk & Brain Health Platform",
+    template: "%s | Care4Brain"
   },
   description: "A comprehensive platform for stroke risk assessment and brain health optimization with interactive tools and AI-powered analysis",
   keywords: ["brain health", "stroke risk", "cognitive assessment", "brain training", "AI health", "MRI analysis", "Alzheimer's detection"],
-  authors: [{ name: "Brainwise Team" }],
-  creator: "Brainwise",
-  publisher: "Brainwise",
-  metadataBase: new URL("https://brainwise.pro"),
+  authors: [{ name: "Care4Brain Team" }],
+  creator: "Care4Brain",
+  publisher: "Care4Brain",
+  metadataBase: new URL("https://care4brain.pro"),
   alternates: {
-    canonical: "https://brainwise.pro",
+    canonical: "https://care4brain.pro",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://brainwise.pro",
-    title: "Brainwise: Complete Brain Health Toolkit",
+    url: "https://care4brain.pro",
+    title: "Care4Brain: Complete Brain Health Toolkit",
     description: "Train, assess, and optimize your brain health with our comprehensive suite of cognitive tools",
-    siteName: "Brainwise",
+    siteName: "Care4Brain",
     images: [
       {
         url: "/brain-hero.png",
         width: 1200,
         height: 630,
-        alt: "Brainwise - Complete Brain Health Toolkit"
+        alt: "Care4Brain - Complete Brain Health Toolkit"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brainwise: Complete Brain Health Toolkit",
+    title: "Care4Brain: Complete Brain Health Toolkit",
     description: "Train, assess, and optimize your brain health with our comprehensive suite of cognitive tools",
-    creator: "@brainwise",
+    creator: "@care4brain",
     images: ["/brain-hero.png"]
   },
   robots: {
@@ -126,7 +126,7 @@ export default function RootLayout({
                     <div className="col-span-1 md:col-span-1">
                       <Link href="/" className="flex items-center gap-2 mb-4">
                         <Brain className="h-6 w-6 text-primary" />
-                        <span className="font-bold">Brainwise</span>
+                        <span className="font-bold">Care4Brain</span>
                       </Link>
                       <p className="text-sm text-muted-foreground">
                         A comprehensive platform for stroke risk assessment and brain health optimization.
@@ -205,7 +205,7 @@ export default function RootLayout({
                   
                   <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-center text-sm text-muted-foreground md:text-left">
-                      © 2025 Brainwise. All rights reserved.
+                      © 2025 Care4Brain. All rights reserved.
                     </p>
                     <p className="text-center text-sm text-muted-foreground md:text-right">
                       Made with ❤️ for brain health

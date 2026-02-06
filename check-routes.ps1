@@ -1,4 +1,4 @@
-Write-Host "=== BRAINWISE NAVIGATION DIAGNOSTIC ===" -ForegroundColor Cyan
+Write-Host "=== CARE4BRAIN NAVIGATION DIAGNOSTIC ===" -ForegroundColor Cyan
 Write-Host ""
 
 $routes = @(

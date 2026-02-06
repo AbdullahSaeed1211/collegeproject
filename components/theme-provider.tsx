@@ -31,7 +31,7 @@ export function ThemeProvider({
   enableSystem = true,
   attribute = "data-theme",
   disableTransitionOnChange = false,
-  storageKey = "brainwise-ui-theme",
+  storageKey = "care4brain-ui-theme",
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 

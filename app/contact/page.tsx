@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { Metadata } from "next";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,8 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Brainwise",
-  description: "Reach out to the Brainwise team with questions, feedback, or support inquiries. We're here to help with your brain health journey.",
+  title: "Contact Us | Care4Brain",
+  description: "Reach out to the Care4Brain team with questions, feedback, or support inquiries. We're here to help with your brain health journey.",
   keywords: "contact, support, feedback, questions, brain health support",
 };
 
@@ -94,7 +96,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-primary mt-0.5" />
                   <div>
                     <h4 className="text-sm font-medium">Email</h4>
-                    <p className="text-sm text-muted-foreground">support@brainwise-health.com</p>
+                    <p className="text-sm text-muted-foreground">support@care4brain-health.com</p>
                     <p className="text-xs text-muted-foreground mt-1">Response within 24 hours</p>
                   </div>
                 </div>

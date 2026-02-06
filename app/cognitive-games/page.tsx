@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MemoryGame } from "@/components/memory-game";
 import { ConcentrationGame } from "@/components/concentration-game";
@@ -9,26 +11,26 @@ import { PatternRecognitionTest } from "@/components/pattern-recognition-test";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cognitive Games | Brainwise",
+  title: "Cognitive Games | Care4Brain",
   description: "Improve your memory, attention, and processing speed with our scientifically designed cognitive games.",
   keywords: "cognitive games, brain training, memory games, attention exercises, processing speed, brain health",
   openGraph: {
-    title: "Brain Training Games | Brainwise",
+    title: "Brain Training Games | Care4Brain",
     description: "Enhance your cognitive abilities with fun, interactive games designed to improve memory, attention, and processing speed.",
-    url: "https://brainwise.com/cognitive-games",
+    url: "https://care4brain.com/cognitive-games",
     type: "website",
     images: [
       {
         url: "/images/og-cognitive-games.jpg",
         width: 1200,
         height: 630,
-        alt: "Brainwise Cognitive Games"
+        alt: "Care4Brain Cognitive Games"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brain Training Games | Brainwise",
+    title: "Brain Training Games | Care4Brain",
     description: "Enhance your cognitive abilities with fun, interactive games designed to improve memory, attention, and processing speed.",
     images: ["/images/og-cognitive-games.jpg"]
   }

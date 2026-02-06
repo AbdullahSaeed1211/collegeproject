@@ -1,6 +1,6 @@
 {
-  "name": "Brainwise - Brain Health Platform",
-  "short_name": "Brainwise",
+  "name": "Care4Brain - Brain Health Platform",
+  "short_name": "Care4Brain",
   "description": "A comprehensive platform for stroke risk assessment and brain health optimization",
   "start_url": "/",
   "display": "standalone",

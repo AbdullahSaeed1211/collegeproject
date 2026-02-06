@@ -24,7 +24,7 @@ export function HeroSection() {
                 <Brain className="h-3 w-3 md:h-3.5 md:w-3.5" />
               </span>
               <AnimatedShinyText shimmerWidth={150} shimmerDuration={3} shimmerDelay={4}>
-                Brainwise — Complete Brain Health Toolkit
+                Care4Brain — Complete Brain Health Toolkit
               </AnimatedShinyText>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight">

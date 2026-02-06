@@ -1,10 +1,12 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Brainwise",
-  description: "Terms and conditions for using the Brainwise platform",
+  title: "Terms of Service | Care4Brain",
+  description: "Terms and conditions for using the Care4Brain platform",
 };
 
 export default function TermsPage() {
@@ -19,7 +21,7 @@ export default function TermsPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
         <p>
-          Welcome to Brainwise (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By accessing or using our website, mobile application, and services (collectively, the &quot;Services&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). Please read these Terms carefully.
+          Welcome to Care4Brain (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By accessing or using our website, mobile application, and services (collectively, the &quot;Services&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). Please read these Terms carefully.
         </p>
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">2. Acceptance of Terms</h2>
@@ -29,7 +31,7 @@ export default function TermsPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">3. Description of Services</h2>
         <p>
-          Brainwise provides cognitive assessment, training, and brain health monitoring tools designed to help users understand and improve their cognitive function and reduce their risk of stroke and other neurological conditions. Our Services include but are not limited to:
+          Care4Brain provides cognitive assessment, training, and brain health monitoring tools designed to help users understand and improve their cognitive function and reduce their risk of stroke and other neurological conditions. Our Services include but are not limited to:
         </p>
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li>Cognitive assessments and brain health surveys</li>
@@ -41,7 +43,7 @@ export default function TermsPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">4. Medical Disclaimer</h2>
         <p>
-          Brainwise is not a healthcare provider, and our Services do not constitute medical advice, diagnosis, or treatment. The information provided through our Services is for informational and educational purposes only. Always consult with qualified healthcare professionals regarding any health concerns or before making any health-related decisions.
+          Care4Brain is not a healthcare provider, and our Services do not constitute medical advice, diagnosis, or treatment. The information provided through our Services is for informational and educational purposes only. Always consult with qualified healthcare professionals regarding any health concerns or before making any health-related decisions.
         </p>
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">5. User Accounts</h2>
@@ -56,12 +58,12 @@ export default function TermsPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">7. Intellectual Property</h2>
         <p>
-          All content, features, and functionality of our Services, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, software, and the compilation thereof, are owned by Brainwise, our licensors, or other providers of such material and are protected by copyright, trademark, and other intellectual property laws.
+          All content, features, and functionality of our Services, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, software, and the compilation thereof, are owned by Care4Brain, our licensors, or other providers of such material and are protected by copyright, trademark, and other intellectual property laws.
         </p>
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">8. Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by law, Brainwise shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, or other intangible losses, resulting from your access to or use of or inability to access or use the Services.
+          To the maximum extent permitted by law, Care4Brain shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, or other intangible losses, resulting from your access to or use of or inability to access or use the Services.
         </p>
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">9. Changes to Terms</h2>
@@ -71,7 +73,7 @@ export default function TermsPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">10. Contact Us</h2>
         <p>
-          If you have any questions about these Terms, please contact us at <a href="mailto:support@brainwise.app" className="text-primary hover:underline">support@brainwise.app</a>.
+          If you have any questions about these Terms, please contact us at <a href="mailto:support@care4brain.app" className="text-primary hover:underline">support@care4brain.app</a>.
         </p>
       </div>
     </div>

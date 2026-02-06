@@ -36,11 +36,11 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.clerk.com *.clerk.dev *.clerk.accounts.dev *.hf.space *.brainwise.pro clerk.brainwise.pro",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.clerk.com *.clerk.dev *.clerk.accounts.dev *.hf.space *.care4brain.pro clerk.care4brain.pro",
               "style-src 'self' 'unsafe-inline' *.hf.space *.clerk.com *.clerk.dev *.clerk.accounts.dev",
               "img-src 'self' data: blob: *.clerk.com *.clerk.dev *.clerk.accounts.dev *.hf.space",
               "font-src 'self' *.hf.space *.clerk.com *.clerk.dev *.clerk.accounts.dev",
-              "connect-src 'self' *.clerk.com *.clerk.dev *.clerk.accounts.dev *.hf.space *.brainwise.pro api.semanticscholar.org clerk-telemetry.com wss:",
+              "connect-src 'self' *.clerk.com *.clerk.dev *.clerk.accounts.dev *.hf.space *.care4brain.pro api.semanticscholar.org clerk-telemetry.com wss:",
               "worker-src 'self' blob:",
               "frame-src 'self' *.hf.space *.gradio.live",
               "media-src 'self' *.hf.space",

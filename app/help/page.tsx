@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, LifeBuoy, Mail, MessageSquare, Phone, Users, BookOpen, HeartPulse } from "lucide-react";

@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+
 import { VisualAttentionTest } from "@/components/visual-attention-test";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
@@ -5,7 +8,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Visual Attention Test | Brainwise",
+  title: "Visual Attention Test | Care4Brain",
   description: "Test and train your visual attention and processing speed with our interactive test.",
 };
 

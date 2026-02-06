@@ -1,4 +1,6 @@
 import { apiDocumentation } from "@/lib/api-docs";
+
+export const dynamic = 'force-dynamic';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -15,8 +17,8 @@ interface ResponseDetail {
 }
 
 export const metadata: Metadata = {
-  title: "API Documentation | Brainwise",
-  description: "Documentation for Brainwise API endpoints and integrations",
+  title: "API Documentation | Care4Brain",
+  description: "Documentation for Care4Brain API endpoints and integrations",
   robots: {
     index: false,  // Don't index API docs
     follow: true
@@ -27,9 +29,9 @@ export default function ApiDocsPage() {
   return (
     <div className="container py-10 max-w-5xl">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">Brainwise API Documentation</h1>
+        <h1 className="text-4xl font-bold mb-2">Care4Brain API Documentation</h1>
         <p className="text-lg text-muted-foreground">
-          Complete reference for the Brainwise platform API endpoints
+          Complete reference for the Care4Brain platform API endpoints
         </p>
       </div>
 

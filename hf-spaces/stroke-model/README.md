@@ -104,9 +104,9 @@ This model was trained on a dataset of over 5,000 patients with various health m
 - BMI
 - Smoking status
 
-## Integration with BrainWise App
+## Integration with Care4Brain App
 
-This model serves as the backend for the BrainWise app's stroke risk calculator, providing users with risk assessments based on their health metrics.
+This model serves as the backend for the Care4Brain app's stroke risk calculator, providing users with risk assessments based on their health metrics.
 
 ## Disclaimer
 

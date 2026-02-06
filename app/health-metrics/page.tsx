@@ -1,8 +1,10 @@
+export const dynamic = "force-dynamic";
+
 import { HealthMetricTracker } from "@/components/health-metric-tracker";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Health Metrics | BrainWise",
+  title: "Health Metrics | Care4Brain",
   description: "Track your health metrics and see how they correlate with your cognitive progress",
 };
 

@@ -199,7 +199,7 @@ This model serves as the backend for the BrainHealth AI platform's Alzheimer's a
 If you use this model in your research, please cite:
 
 ```
-@misc{brainwise-alzheimers-detection,
+@misc{care4brain-alzheimers-detection,
   author = {Your Name},
   title = {Deep Learning Model for Alzheimer's Disease Detection and Progression},
   year = {2023},

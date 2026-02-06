@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { WordMemoryTest } from "@/components/word-memory-test";
 
 export default function WordMemoryTestPage() {

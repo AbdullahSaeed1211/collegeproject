@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { HeroSection } from "@/components/home/hero-section";
 import { StatsBar } from "@/components/home/stats-bar";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
@@ -8,26 +10,26 @@ import { CtaSection } from "@/components/home/cta-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brainwise: Brain Health & Cognitive Training Platform",
+  title: "Care4Brain: Brain Health & Cognitive Training Platform",
   description: "Improve your brain health, assess stroke risk, and enhance cognitive abilities with science-backed tools and training games.",
   keywords: "brain health, cognitive training, stroke prediction, alzheimer's risk, memory games, brain exercises",
   openGraph: {
-    title: "Brainwise: Brain Health & Cognitive Training Platform",
+    title: "Care4Brain: Brain Health & Cognitive Training Platform",
     description: "Improve your brain health, assess stroke risk, and enhance cognitive abilities with science-backed tools and training games.",
-    url: "https://brainwise.vercel.app",
+    url: "https://care4brain.vercel.app",
     type: "website",
     images: [
       {
         url: "/images/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Brainwise Brain Health Platform"
+        alt: "Care4Brain Brain Health Platform"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brainwise: Brain Health & Cognitive Training Platform",
+    title: "Care4Brain: Brain Health & Cognitive Training Platform",
     description: "Improve your brain health, assess stroke risk, and enhance cognitive abilities with science-backed tools and training games.",
     images: ["/images/og-home.jpg"]
   },

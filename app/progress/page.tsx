@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { Metadata } from "next";
 import { TrendingUp } from "lucide-react";
@@ -15,7 +17,7 @@ import Link from "next/link";
 import { ExportButton } from "@/components/export-button";
 
 export const metadata: Metadata = {
-  title: "Progress Tracker | Brainwise",
+  title: "Progress Tracker | Care4Brain",
   description: "Track your cognitive performance over time with detailed insights and performance metrics.",
   keywords: "cognitive tracking, brain health progress, performance metrics, cognitive testing results",
 };

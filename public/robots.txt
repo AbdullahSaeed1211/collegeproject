@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://brainwise-sigma.vercel.app/sitemap.xml
+Sitemap: https://care4brain-sigma.vercel.app/sitemap.xml
 
 # Disallow login/auth pages
 Disallow: /login

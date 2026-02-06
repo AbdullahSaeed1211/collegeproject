@@ -95,7 +95,7 @@ export function NewsletterSignup() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Mail className="h-5 w-5 text-primary" />
-          Brainwise Newsletter
+          Care4Brain Newsletter
         </CardTitle>
         <CardDescription>
           Stay updated with the latest brain health research and tips.
@@ -122,7 +122,7 @@ export function NewsletterSignup() {
               className="mt-1"
             />
             <Label htmlFor="consent" className="text-sm text-muted-foreground">
-              I agree to receive emails from Brainwise about brain health, cognitive training, and new features. You can unsubscribe at any time.
+              I agree to receive emails from Care4Brain about brain health, cognitive training, and new features. You can unsubscribe at any time.
             </Label>
           </div>
         </CardContent>

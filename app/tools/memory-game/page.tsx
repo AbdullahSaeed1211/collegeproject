@@ -1,7 +1,9 @@
+export const dynamic = "force-dynamic";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Memory Game - BrainWise",
+  title: "Memory Game - Care4Brain",
   description: "Test and improve your memory with our interactive memory games",
 };
 

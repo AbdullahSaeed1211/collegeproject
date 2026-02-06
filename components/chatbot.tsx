@@ -105,7 +105,7 @@ export function Chatbot() {
       <CardHeader className="pb-4 border-b">
         <CardTitle className="text-xl flex items-center gap-2">
           <Avatar className="h-8 w-8">
-            <AvatarImage src="/brain-ai-logo.png" alt="Brainwise" />
+            <AvatarImage src="/brain-ai-logo.png" alt="Care4Brain" />
             <AvatarFallback className="bg-primary text-primary-foreground">
               BW
             </AvatarFallback>
@@ -129,7 +129,7 @@ export function Chatbot() {
                 }`}>
                   {message.role === "assistant" ? (
                     <Avatar className="h-8 w-8 mt-1 flex-shrink-0">
-                      <AvatarImage src="/brain-ai-logo.png" alt="Brainwise" />
+                      <AvatarImage src="/brain-ai-logo.png" alt="Care4Brain" />
                       <AvatarFallback className="bg-primary text-primary-foreground">
                         BW
                       </AvatarFallback>
@@ -176,7 +176,7 @@ export function Chatbot() {
               <div className="flex justify-start animate-in fade-in-0 slide-in-from-bottom-3">
                 <div className="flex items-start gap-3 max-w-[85%]">
                   <Avatar className="h-8 w-8 mt-1 flex-shrink-0">
-                    <AvatarImage src="/brain-ai-logo.png" alt="Brainwise" />
+                    <AvatarImage src="/brain-ai-logo.png" alt="Care4Brain" />
                     <AvatarFallback className="bg-primary text-primary-foreground">
                       BW
                     </AvatarFallback>

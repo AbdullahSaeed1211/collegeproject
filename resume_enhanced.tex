@@ -1,0 +1,351 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.4 cm,
+    bottom=1.4 cm,
+    left=1.6 cm,
+    right=1.6 cm,
+    footskip=0.5 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 139} % Dark blue for links
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Abdullah Saeed's Resume},
+    pdfauthor={Abdullah Saeed},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.1cm}
+\pagenumbering{gobble}
+
+% Section formatting
+\titleformat{\section}{\needspace{2\baselineskip}\bfseries\normalsize}{}{0pt}{}[\vspace{0.8pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.2cm}{0.15cm}
+
+% Bullet point formatting
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.04cm,
+        parsep=0.04cm,
+        partopsep=0pt,
+        itemsep=0.01cm,
+        leftmargin=0.2cm + 9pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.08cm,
+        parsep=0.08cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=9pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0cm + 0.00001cm}{0cm + 0.00001cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.2cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.35}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{20pt}{20pt}\selectfont \textbf{Abdullah Saeed}
+
+        \vspace{2pt}
+        \small
+        \mbox{\hrefWithoutArrow{mailto:abdullah.saeed1724@gmail.com}{\textcolor{primaryColor}{abdullah.saeed1724@gmail.com}}}%
+        \kern 3pt%
+        \AND%
+        \kern 3pt%
+        \mbox{\hrefWithoutArrow{https://abdullahsaeed.me}{\textcolor{primaryColor}{abdullahsaeed.me}}}%
+        \kern 3pt%
+        \AND%
+        \kern 3pt%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/abdullahsaeed1724}{\textcolor{primaryColor}{LinkedIn}}}%
+        \kern 3pt%
+        \AND%
+        \kern 3pt%
+        \mbox{\hrefWithoutArrow{https://github.com/abdullahsaeed1724}{\textcolor{primaryColor}{GitHub}}}%
+    \end{header}
+
+    \vspace{2pt}
+
+    \section{EDUCATION}
+        \begin{twocolentry}{
+            June 2025
+        }
+            \textbf{Amity University}, B.Tech in Computer Science \& Engineering, Uttar Pradesh, India
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{CGPA:} 8.48/10.00 | \textbf{Merit Scholar} - Academic Excellence Award
+                \item \textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems, Software Engineering, Computer Networks, Operating Systems, Web Technologies, Artificial Intelligence, Distributed Systems, Theory of Computation, Compiler Construction
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{RESEARCH PUBLICATIONS}
+        \begin{twocolentry}{
+            IEEE CICTN 2025
+        }
+            \textbf{Enhanced Brain Tumor Detection via ResNet50 Classification and Residual U-Net Segmentation}
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Achieved \textbf{94.2\% accuracy improvement} over baseline models using ensemble deep learning approach
+                \item Developed novel ResNet50-based classification system with Residual U-Net for precise tumor segmentation
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.08cm}
+        \begin{twocolentry}{
+            IEEE ICDT 2024
+        }
+            \textbf{AI-Enabled Semantic Web: Enhancing Information Retrieval Through Intelligent Knowledge Graphs}
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Proposed novel semantic indexing algorithm improving query response time by \textbf{40\%}
+                \item Designed intelligent knowledge graph architecture for enhanced information retrieval systems
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    \section{EXPERIENCE}
+        \begin{twocolentry}{
+            Apr 2025 – Present
+        }
+            \textbf{Freelance Fullstack Developer}, \textcolor{primaryColor}{Kiiro.cx} -- Remote
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Solely led the end-to-end development of \textbf{8+ production-grade websites} for UAE-based SMBs and international clients
+                \item Managed all aspects of client engagement, requirements gathering, and delivery for dubbby.com, care4brain.pro, simplymortgage, lotusproservices, achieving \textbf{150\% lead generation improvement}
+                \item Built a reusable component library, reducing development time by \textbf{60\%} using Next.js and TypeScript
+                \item Delivered tailored solutions independently, ensuring high quality and timely delivery
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.08cm}
+        \begin{twocolentry}{
+            Mar 2025 – May 2025
+        }
+            \textbf{Software Development Intern}, \textcolor{primaryColor}{Blue Rocket LLC} -- Delhi, India
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Architected \textbf{Galaxy.AI webapp} integrating \textbf{27 AI-powered document processing tools}
+                \item Implemented Mistral OCR pipeline with microservices architecture for scalable document processing
+                \item Built microservices supporting \textbf{18 PDF manipulation} and \textbf{9 NLP tools} with scalable infrastructure
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.08cm}
+        \begin{twocolentry}{
+            Jul 2024 – Sep 2024
+        }
+            \textbf{Software Engineering Fellow}, \textcolor{primaryColor}{Headstarter AI \& HIT AI} -- Remote
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Led development of a \textbf{Top-10 ranked AI web application} selected from \textbf{500+ project submissions} in partnership with HIT AI (London, UK)
+                \item Built and deployed a SaaS product integrating \textbf{Gemini 1.5 Flash API}, Stripe, and LangChain-powered web scraping
+                \item Scaled full-stack applications to support \textbf{100+ users}, iterating projects quickly based on user feedback
+                \item Designed and trained \textbf{5+ AI/ML models}, including neural networks, RAG pipelines, and recommendation systems
+                \item Optimized classification model's backend algorithms using \textbf{Flask and Python}, improving real-time AI performance by \textbf{50\%}
+                \item Developed video upload UI using \textbf{Next.js, Tailwind CSS, and AWS S3}, enhancing file processing speed by \textbf{40\%}
+                \item Automated data summarization with \textbf{MongoDB, Clerk, and LangChain}, reducing manual review time by \textbf{30\%}
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.08cm}
+        \begin{twocolentry}{
+            Mar 2024 – Jul 2024
+        }
+            \textbf{Web Developer Intern}, \textcolor{primaryColor}{Mirch Media} -- New York (Remote)
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Converted \textbf{6+ Figma designs} to responsive React components with \textbf{98\% design accuracy}
+                \item Optimized application performance achieving \textbf{15\% faster load times} through code optimization
+                \item Collaborated in agile environment contributing to \textbf{3 major product releases}
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{PROJECTS}
+        \begin{twocolentry}{
+            \textcolor{primaryColor}{\href{https://guidance-welfare.vercel.app}{Live Platform}}
+        }
+            \textbf{Guidance Welfare Foundation - Islamic Educational Platform} \textit{(Production Ready)}
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Full-Stack Learning Management System} serving \textbf{100+ active learners} with enterprise-grade architecture
+                \item Architected production-ready educational platform with comprehensive role-based access control and admin/student permissions
+                \item Implemented advanced test management system with multiple question types, auto-grading, and real-time analytics
+                \item Built payment processing workflow with multi-method support and PWA capabilities with offline functionality
+                \item Achieved \textbf{60-80\% reduction in API calls} through React Query optimization and advanced caching strategies
+                \item Designed \textbf{15+ interconnected database tables} with optimized queries, indexing, and custom analytics views
+                \item \textbf{Technologies:} Next.js 15, TypeScript, Prisma ORM, PostgreSQL, Clerk Auth, React Query, Tailwind CSS, PWA, Vercel
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.08cm}
+        \begin{twocolentry}{
+            \textcolor{primaryColor}{\href{https://care4brain.pro}{Live Platform}}
+        }
+            \textbf{Care4Brain.pro - Comprehensive Brain Health Research Platform}
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Research-Validated Medical AI Platform} with published academic methodology and clinical performance metrics
+                \item Developed \textbf{3 production-grade AI models} achieving clinical-grade accuracy: \textbf{Stroke prediction (95\% accuracy)}, Brain tumor detection (95\% accuracy with ResNet50 CNN), and Alzheimer's disease detection (94\% accuracy with EfficientNet)
+                \item Architected \textbf{distributed system} with Hugging Face Spaces for ML model hosting, achieving \textbf{60-75\% model size reduction} through quantization while maintaining accuracy
+                \item Implemented \textbf{15+ cognitive assessment tools} including memory games, reaction tests, visual attention, pattern recognition, and verbal fluency tests with performance tracking
+                \item Built comprehensive \textbf{health metrics tracking system} with longitudinal monitoring, progress visualization, and personalized risk factor analysis
+                \item Designed \textbf{real-time medical image processing} pipeline for MRI scan analysis with secure patient data management and HIPAA-compliant architecture
+                \item Integrated \textbf{research paper API} with live academic literature feeds and evidence-based educational resources
+                \item Achieved \textbf{clinical-grade performance} with model agreement rates of 89-91\% compared to radiologist assessments (vs. 94.3\% inter-radiologist agreement)
+                \item \textbf{Technologies:} Next.js 14, TypeScript, TensorFlow.js, MongoDB, Hugging Face Spaces, Uploadcare CDN, FastAPI, Docker, PWA
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.08cm}
+        \begin{twocolentry}{
+            \textcolor{primaryColor}{\href{https://pantry-panic.vercel.app}{Live Link}}
+        }
+            \textbf{Pantry Panic - AI Inventory Management System}
+        \end{twocolentry}
+        \vspace{0.02cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built predictive inventory system using machine learning algorithms with \textbf{85\% accuracy} in demand forecasting
+                \item Implemented real-time stock tracking with automated reorder suggestions and user behavior analytics
+                \item \textbf{Technologies:} Next.js, Firebase, ML Algorithms, Analytics, Predictive Modeling
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{LEADERSHIP \& ACHIEVEMENTS}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Google Developer Student Club (GDSC) Lead:} Organized \textbf{20+ technical events} and workshops at Amity University
+                \item \textbf{Women's Day Coordinator - GDG Lucknow:} Community engagement and diversity initiatives (\textbf{90+ attendees})
+                \item \textbf{Published 3 IEEE research papers} with practical AI implementations and novel algorithmic approaches
+                \item \textbf{Mentored 10+ junior developers} in full-stack development practices and best coding standards
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{TECHNICAL SKILLS}
+        \begin{onecolentry}
+            \textbf{Programming Languages:} JavaScript, TypeScript, Python, Java, C++, SQL
+        \end{onecolentry}
+        
+        \vspace{0.06cm}
+        \begin{onecolentry}
+            \textbf{Frontend Technologies:} React, Next.js, HTML5, CSS3, Tailwind CSS, Shadcn UI, PWA Development
+        \end{onecolentry}
+        
+        \vspace{0.06cm}
+        \begin{onecolentry}
+            \textbf{Backend \& Database:} Node.js, Prisma ORM, PostgreSQL, MongoDB, API Design, Database Architecture
+        \end{onecolentry}
+        
+        \vspace{0.06cm}
+        \begin{onecolentry}
+            \textbf{Cloud \& DevOps:} Vercel, Supabase, Firebase, Git, CI/CD, Performance Optimization
+        \end{onecolentry}
+        
+        \vspace{0.06cm}
+        \begin{onecolentry}
+            \textbf{AI/ML Technologies:} TensorFlow.js, PyTorch, ResNet50, EfficientNet, Random Forest, Hugging Face, FastAPI, Docker, Medical AI
+        \end{onecolentry}
+
+    \section{CERTIFICATIONS}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Postman Student Expert} - API Development \& Testing
+                \item \textbf{Merit Scholar} - Amity University (Academic Excellence)
+                \item \textbf{Google Developer Student Club} - Technical Leadership
+            \end{highlights}
+        \end{onecolentry}
+
+\end{document} 

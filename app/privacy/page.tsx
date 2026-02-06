@@ -1,10 +1,12 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Brainwise",
-  description: "Learn how Brainwise protects and handles your personal information",
+  title: "Privacy Policy | Care4Brain",
+  description: "Learn how Care4Brain protects and handles your personal information",
 };
 
 export default function PrivacyPage() {
@@ -19,7 +21,7 @@ export default function PrivacyPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
         <p>
-          Brainwise (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, mobile application, and services (collectively, the &quot;Services&quot;).
+          Care4Brain (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, mobile application, and services (collectively, the &quot;Services&quot;).
         </p>
         <p>
           Please read this Privacy Policy carefully. By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
@@ -93,7 +95,7 @@ export default function PrivacyPage() {
         
         <h2 className="text-2xl font-semibold mt-8 mb-4">9. Contact Us</h2>
         <p>
-          If you have any questions about this Privacy Policy, please contact us at <a href="mailto:privacy@brainwise.app" className="text-primary hover:underline">privacy@brainwise.app</a>.
+          If you have any questions about this Privacy Policy, please contact us at <a href="mailto:privacy@care4brain.app" className="text-primary hover:underline">privacy@care4brain.app</a>.
         </p>
         
         <div className="mt-8 flex items-center">

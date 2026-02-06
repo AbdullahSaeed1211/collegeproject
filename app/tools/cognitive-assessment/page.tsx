@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { BrainHealthAssessment } from "@/components/brain-health-assessment";
 
 export default function CognitiveAssessmentPage() {

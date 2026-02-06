@@ -1,4 +1,7 @@
+export const dynamic = "force-dynamic";
+
 import { MeditationTimer } from "@/components/meditation-timer";
+
 
 export default function MeditationTimerPage() {
   return (

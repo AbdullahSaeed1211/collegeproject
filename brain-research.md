@@ -2,7 +2,7 @@
 
 ## ABSTRACT
 
-This research presents BrainWise, a comprehensive web-based system for brain disease prediction and monitoring using machine learning techniques. The system integrates multiple deep learning and classical machine learning models to predict stroke risk and detect brain tumors and Alzheimer's disease from MRI scans. Built on a modern technology stack including Next.js, React, and FastAPI, BrainWise delivers a responsive and accessible user experience while maintaining high prediction accuracy. The stroke prediction model achieved 95% accuracy and an F1 score of 0.82 using a Random Forest classifier. The brain tumor detection model, implemented using a convolutional neural network based on ResNet50, successfully classifies MRI scans into glioma, meningioma, pituitary, and no tumor categories. The Alzheimer's detection model similarly utilizes deep learning to identify different stages of the disease from brain scans. This paper details the research methodology, system architecture, implementation challenges, evaluation metrics, and clinical validation of the BrainWise platform. The results demonstrate the potential of machine learning in creating accessible, accurate, and user-friendly tools for neurological disease risk assessment, which could significantly impact early detection and intervention strategies in healthcare.
+This research presents Care4Brain, a comprehensive web-based system for brain disease prediction and monitoring using machine learning techniques. The system integrates multiple deep learning and classical machine learning models to predict stroke risk and detect brain tumors and Alzheimer's disease from MRI scans. Built on a modern technology stack including Next.js, React, and FastAPI, Care4Brain delivers a responsive and accessible user experience while maintaining high prediction accuracy. The stroke prediction model achieved 95% accuracy and an F1 score of 0.82 using a Random Forest classifier. The brain tumor detection model, implemented using a convolutional neural network based on ResNet50, successfully classifies MRI scans into glioma, meningioma, pituitary, and no tumor categories. The Alzheimer's detection model similarly utilizes deep learning to identify different stages of the disease from brain scans. This paper details the research methodology, system architecture, implementation challenges, evaluation metrics, and clinical validation of the Care4Brain platform. The results demonstrate the potential of machine learning in creating accessible, accurate, and user-friendly tools for neurological disease risk assessment, which could significantly impact early detection and intervention strategies in healthcare.
 
 ## 1. INTRODUCTION
 
@@ -14,7 +14,7 @@ Early detection and intervention remain critical factors in improving outcomes f
 
 Recent advances in artificial intelligence (AI) and machine learning have demonstrated promising capabilities in medical diagnostics, particularly in image analysis and risk prediction. These technologies offer the potential to democratize access to screening tools, assist healthcare providers in making more accurate diagnoses, and empower individuals to monitor their brain health proactively. The application of machine learning to neurological disease prediction represents a transformative opportunity to address the growing burden of these conditions.
 
-BrainWise emerges in this context as a comprehensive brain health monitoring and disease prediction platform. By leveraging state-of-the-art machine learning algorithms and a user-friendly web interface, BrainWise aims to bridge the gap between advanced AI technologies and everyday healthcare needs, making sophisticated neurological risk assessment accessible to both healthcare providers and individuals.
+Care4Brain emerges in this context as a comprehensive brain health monitoring and disease prediction platform. By leveraging state-of-the-art machine learning algorithms and a user-friendly web interface, Care4Brain aims to bridge the gap between advanced AI technologies and everyday healthcare needs, making sophisticated neurological risk assessment accessible to both healthcare providers and individuals.
 
 ### 1.2. Problem Statement
 
@@ -32,7 +32,7 @@ Despite advances in medical technology and increasing awareness of brain health,
 
 6. **Lack of User-Friendly Health Monitoring Tools**: Existing brain health monitoring tools often lack user-friendly interfaces and integrated educational resources, limiting their adoption and effectiveness.
 
-BrainWise addresses these challenges by creating an integrated platform that combines machine learning-based risk prediction, image analysis, health metrics tracking, and educational resources in a single, accessible system designed for both clinical and personal use.
+Care4Brain addresses these challenges by creating an integrated platform that combines machine learning-based risk prediction, image analysis, health metrics tracking, and educational resources in a single, accessible system designed for both clinical and personal use.
 
 ### 1.3. Objectives of the Study
 
@@ -66,15 +66,15 @@ The scope of this research encompasses:
 
 The significance of this research lies in several areas:
 
-1. **Clinical Impact**: By enabling earlier detection of neurological risk factors and conditions, BrainWise has the potential to improve clinical outcomes through timely intervention.
+1. **Clinical Impact**: By enabling earlier detection of neurological risk factors and conditions, Care4Brain has the potential to improve clinical outcomes through timely intervention.
 
 2. **Healthcare Accessibility**: The system democratizes access to sophisticated neurological risk assessment tools, potentially reducing disparities in neurological care.
 
 3. **Technical Innovation**: The project advances methods for integrating and deploying multiple machine learning models in a cohesive, user-friendly web application.
 
-4. **Preventive Healthcare**: By emphasizing risk assessment and education, BrainWise contributes to the paradigm shift toward preventive neurological healthcare.
+4. **Preventive Healthcare**: By emphasizing risk assessment and education, Care4Brain contributes to the paradigm shift toward preventive neurological healthcare.
 
-5. **Research Platform**: Beyond its immediate clinical applications, BrainWise establishes a framework for further research in machine learning-based neurological assessment and monitoring.
+5. **Research Platform**: Beyond its immediate clinical applications, Care4Brain establishes a framework for further research in machine learning-based neurological assessment and monitoring.
 
 This research addresses a critical need in healthcare while advancing technical approaches to medical AI system development and deployment, with potential implications for both clinical practice and future research directions.
 
@@ -82,7 +82,7 @@ This research addresses a critical need in healthcare while advancing technical 
 
 ### 2.1. Overview of Brain Health and Stroke
 
-Neurological disorders encompass a broad spectrum of conditions affecting the brain, spinal cord, and peripheral nerves. Understanding the current landscape of these disorders provides essential context for the development of predictive tools like BrainWise.
+Neurological disorders encompass a broad spectrum of conditions affecting the brain, spinal cord, and peripheral nerves. Understanding the current landscape of these disorders provides essential context for the development of predictive tools like Care4Brain.
 
 Stroke, characterized by sudden interruption of blood flow to the brain, remains one of the most devastating neurological emergencies. According to the World Stroke Organization, one in four people worldwide will experience a stroke in their lifetime [5]. The Global Burden of Disease study indicated that in 2019, there were 12.2 million incident strokes, 101 million prevalent strokes, 143 million disability-adjusted life years due to stroke, and 6.55 million deaths from stroke [6]. Risk factors for stroke include hypertension, diabetes, smoking, physical inactivity, and atrial fibrillation, many of which are modifiable through lifestyle changes and medical intervention [7].
 
@@ -106,11 +106,11 @@ For brain tumor detection and classification, convolutional neural networks (CNN
 
 In Alzheimer's disease detection, machine learning has shown promise in identifying disease markers from various data sources. Ebrahimi-Ghahnavieh et al. [19] utilized CNNs for Alzheimer's detection from MRI scans, achieving 94.1% accuracy in classifying patients into normal, mild cognitive impairment, and Alzheimer's categories. Jo et al. [20] demonstrated that deep learning models could detect signs of Alzheimer's in MRI scans years before clinical diagnosis with accuracy rates of 81-90%.
 
-While these studies demonstrate the potential of machine learning in neurological applications, most focus on isolated models rather than integrated systems. The BrainWise project builds upon this foundation by creating a comprehensive platform that integrates multiple prediction models within a unified, accessible system.
+While these studies demonstrate the potential of machine learning in neurological applications, most focus on isolated models rather than integrated systems. The Care4Brain project builds upon this foundation by creating a comprehensive platform that integrates multiple prediction models within a unified, accessible system.
 
 ### 2.3. Existing Brain Health Monitoring Systems
 
-Several brain health monitoring systems have been developed in recent years, each with different focuses and limitations. These systems provide important context and comparison points for the BrainWise platform.
+Several brain health monitoring systems have been developed in recent years, each with different focuses and limitations. These systems provide important context and comparison points for the Care4Brain platform.
 
 Commercial platforms like BrainCheck and Cognito offer cognitive testing through mobile applications, focusing primarily on memory and cognitive function assessment [21]. These platforms provide valuable screening tools but typically do not incorporate comprehensive risk prediction for specific neurological conditions.
 
@@ -128,55 +128,55 @@ Most existing systems share several limitations:
 3. They seldom integrate prediction models, educational resources, and personal health tracking
 4. They rarely incorporate multiple modalities of assessment (questionnaires, image analysis, etc.)
 
-BrainWise addresses these limitations by creating an integrated platform that combines multiple assessment modalities with educational resources and personal health tracking in a user-friendly interface accessible to both clinicians and individuals.
+Care4Brain addresses these limitations by creating an integrated platform that combines multiple assessment modalities with educational resources and personal health tracking in a user-friendly interface accessible to both clinicians and individuals.
 
 ### 2.4. Neural Network Approaches for Medical Image Analysis
 
-Medical image analysis has been revolutionized by neural network approaches, particularly convolutional neural networks (CNNs). The literature reveals several key developments relevant to the BrainWise platform.
+Medical image analysis has been revolutionized by neural network approaches, particularly convolutional neural networks (CNNs). The literature reveals several key developments relevant to the Care4Brain platform.
 
 CNNs have demonstrated remarkable success in analyzing medical images across various modalities. Litjens et al. [26] conducted a comprehensive review of deep learning in medical image analysis, identifying over 300 contributions across different imaging modalities, with particularly strong performance in applications involving MRI and CT scans.
 
-For brain tumor detection specifically, architecture selection has proven critical. Saxena et al. [27] compared various CNN architectures for brain tumor classification and found that deeper architectures like ResNet50 outperformed shallower networks, achieving accuracy rates of 95-98%. This finding influenced the BrainWise implementation, which utilizes ResNet50 as the foundation for its tumor detection model.
+For brain tumor detection specifically, architecture selection has proven critical. Saxena et al. [27] compared various CNN architectures for brain tumor classification and found that deeper architectures like ResNet50 outperformed shallower networks, achieving accuracy rates of 95-98%. This finding influenced the Care4Brain implementation, which utilizes ResNet50 as the foundation for its tumor detection model.
 
-Transfer learning has emerged as a particularly valuable approach in medical imaging where limited labeled data is available. Swati et al. [28] demonstrated that fine-tuning pre-trained CNNs on brain MRI datasets improved classification accuracy by 5-10% compared to training from scratch, even with limited training samples. This approach aligns with the BrainWise implementation, which leverages transfer learning from ImageNet pre-trained models.
+Transfer learning has emerged as a particularly valuable approach in medical imaging where limited labeled data is available. Swati et al. [28] demonstrated that fine-tuning pre-trained CNNs on brain MRI datasets improved classification accuracy by 5-10% compared to training from scratch, even with limited training samples. This approach aligns with the Care4Brain implementation, which leverages transfer learning from ImageNet pre-trained models.
 
-Data augmentation techniques have proven essential for improving model robustness, especially with limited training data. Pereira et al. [29] showed that applying geometric transformations (rotation, flipping, scaling) and intensity transformations improved brain tumor segmentation performance by 3-7%. The BrainWise implementation incorporates similar data augmentation techniques to enhance model robustness.
+Data augmentation techniques have proven essential for improving model robustness, especially with limited training data. Pereira et al. [29] showed that applying geometric transformations (rotation, flipping, scaling) and intensity transformations improved brain tumor segmentation performance by 3-7%. The Care4Brain implementation incorporates similar data augmentation techniques to enhance model robustness.
 
-Addressing implementation challenges, Razzak et al. [30] highlighted the importance of preprocessing steps in medical image analysis, including normalization, skull stripping, and noise reduction for brain MRI analysis. These considerations informed the preprocessing pipeline implemented in the BrainWise platform.
+Addressing implementation challenges, Razzak et al. [30] highlighted the importance of preprocessing steps in medical image analysis, including normalization, skull stripping, and noise reduction for brain MRI analysis. These considerations informed the preprocessing pipeline implemented in the Care4Brain platform.
 
-Recent advances have also focused on model explainability, addressing the "black box" nature of deep learning. Holzinger et al. [31] reviewed explainable AI approaches in medical imaging and highlighted techniques such as Grad-CAM for generating visual explanations of CNN decisions, an approach that could be incorporated into future iterations of BrainWise.
+Recent advances have also focused on model explainability, addressing the "black box" nature of deep learning. Holzinger et al. [31] reviewed explainable AI approaches in medical imaging and highlighted techniques such as Grad-CAM for generating visual explanations of CNN decisions, an approach that could be incorporated into future iterations of Care4Brain.
 
 ### 2.5. Machine Learning for Stroke Prediction
 
-The literature on machine learning for stroke prediction reveals diverse approaches and challenges relevant to the BrainWise implementation.
+The literature on machine learning for stroke prediction reveals diverse approaches and challenges relevant to the Care4Brain implementation.
 
 Traditional stroke risk assessment tools like the Framingham Risk Score (FRS) and ASCVD Risk Calculator have been the clinical standard but often demonstrate limited predictive accuracy. Kaur et al. [32] evaluated these tools and found area under the curve (AUC) values ranging from 0.68 to 0.74, suggesting room for improvement through machine learning approaches.
 
-Various machine learning algorithms have been applied to stroke prediction. Chen et al. [33] compared logistic regression, support vector machines (SVM), random forests, and neural networks for stroke prediction and found that ensemble methods like random forests consistently outperformed single models, achieving accuracy rates of 80-85%. This finding supports the BrainWise implementation, which utilizes a random forest classifier for stroke prediction.
+Various machine learning algorithms have been applied to stroke prediction. Chen et al. [33] compared logistic regression, support vector machines (SVM), random forests, and neural networks for stroke prediction and found that ensemble methods like random forests consistently outperformed single models, achieving accuracy rates of 80-85%. This finding supports the Care4Brain implementation, which utilizes a random forest classifier for stroke prediction.
 
-Feature selection has proven critical in stroke prediction models. Sung et al. [34] demonstrated that incorporating both traditional risk factors (age, hypertension, diabetes) and novel markers (genetic factors, inflammatory markers) improved prediction accuracy from 78% to 89%. The BrainWise stroke prediction model incorporates both traditional risk factors and additional clinical parameters to enhance predictive power.
+Feature selection has proven critical in stroke prediction models. Sung et al. [34] demonstrated that incorporating both traditional risk factors (age, hypertension, diabetes) and novel markers (genetic factors, inflammatory markers) improved prediction accuracy from 78% to 89%. The Care4Brain stroke prediction model incorporates both traditional risk factors and additional clinical parameters to enhance predictive power.
 
-Class imbalance represents a significant challenge in stroke prediction datasets, where positive cases (stroke) typically represent less than 5% of samples. Tama et al. [35] addressed this challenge using techniques like SMOTE (Synthetic Minority Over-sampling Technique) and weighted classifiers, improving F1 scores by 0.15-0.25. The BrainWise implementation incorporates class weighting to address this imbalance.
+Class imbalance represents a significant challenge in stroke prediction datasets, where positive cases (stroke) typically represent less than 5% of samples. Tama et al. [35] addressed this challenge using techniques like SMOTE (Synthetic Minority Over-sampling Technique) and weighted classifiers, improving F1 scores by 0.15-0.25. The Care4Brain implementation incorporates class weighting to address this imbalance.
 
-Model interpretability remains essential in clinical applications. Ahmad et al. [36] demonstrated that providing feature importance and decision explanations alongside stroke predictions improved clinician acceptance and trust in model outputs. The BrainWise system implements risk factor identification and explanation to enhance interpretability.
+Model interpretability remains essential in clinical applications. Ahmad et al. [36] demonstrated that providing feature importance and decision explanations alongside stroke predictions improved clinician acceptance and trust in model outputs. The Care4Brain system implements risk factor identification and explanation to enhance interpretability.
 
-Recent research has also explored integration of stroke prediction models into clinical workflows. Kelly et al. [37] found that embedding machine learning prediction tools into electronic health record systems increased utilization by clinicians by 35% compared to standalone applications. This finding influenced the BrainWise design, which prioritizes integration capabilities.
+Recent research has also explored integration of stroke prediction models into clinical workflows. Kelly et al. [37] found that embedding machine learning prediction tools into electronic health record systems increased utilization by clinicians by 35% compared to standalone applications. This finding influenced the Care4Brain design, which prioritizes integration capabilities.
 
 ### 2.6. Next.js and Modern Web Application Architectures
 
-The technical implementation of BrainWise relies heavily on modern web application architectures, particularly Next.js, which represents an evolution in web development approaches relevant to healthcare applications.
+The technical implementation of Care4Brain relies heavily on modern web application architectures, particularly Next.js, which represents an evolution in web development approaches relevant to healthcare applications.
 
-Server-side rendering (SSR) has emerged as a critical approach for performance-sensitive applications. Mikowski and Powell [38] evaluated the performance impact of SSR versus client-side rendering (CSR) and found that SSR reduced time-to-interactive by 30-40% on average, particularly beneficial for users on mobile networks. The BrainWise implementation leverages Next.js's hybrid rendering capabilities to optimize performance.
+Server-side rendering (SSR) has emerged as a critical approach for performance-sensitive applications. Mikowski and Powell [38] evaluated the performance impact of SSR versus client-side rendering (CSR) and found that SSR reduced time-to-interactive by 30-40% on average, particularly beneficial for users on mobile networks. The Care4Brain implementation leverages Next.js's hybrid rendering capabilities to optimize performance.
 
-React Server Components, introduced in Next.js 13+, represent a significant advancement for data-heavy applications. Abramov and Poulton [39] demonstrated that server components reduced JavaScript bundle sizes by 30-60% by moving data fetching and processing to the server. This approach is particularly valuable for BrainWise, which handles complex medical data visualization.
+React Server Components, introduced in Next.js 13+, represent a significant advancement for data-heavy applications. Abramov and Poulton [39] demonstrated that server components reduced JavaScript bundle sizes by 30-60% by moving data fetching and processing to the server. This approach is particularly valuable for Care4Brain, which handles complex medical data visualization.
 
-API route handlers in Next.js provide an elegant solution for backend functionality. Harrington [40] compared various approaches to backend integration in JavaScript applications and found that co-located API routes (as implemented in Next.js) reduced development complexity and improved maintainability compared to separate backend services for small to medium applications. BrainWise utilizes this approach for handling data processing and API integrations.
+API route handlers in Next.js provide an elegant solution for backend functionality. Harrington [40] compared various approaches to backend integration in JavaScript applications and found that co-located API routes (as implemented in Next.js) reduced development complexity and improved maintainability compared to separate backend services for small to medium applications. Care4Brain utilizes this approach for handling data processing and API integrations.
 
-Progressive Web Application (PWA) capabilities, supported by Next.js, enhance user experience through features like offline functionality and app-like interfaces. Biørn-Hansen et al. [41] found that PWAs achieved 22% higher user retention rates compared to standard web applications. BrainWise implements PWA features to improve engagement, particularly important for health monitoring applications.
+Progressive Web Application (PWA) capabilities, supported by Next.js, enhance user experience through features like offline functionality and app-like interfaces. Biørn-Hansen et al. [41] found that PWAs achieved 22% higher user retention rates compared to standard web applications. Care4Brain implements PWA features to improve engagement, particularly important for health monitoring applications.
 
-Integration with content delivery networks (CDNs) through Next.js's static generation capabilities enhances global accessibility. Wang et al. [42] demonstrated that CDN-delivered applications reduced latency by 40-60% across global regions compared to single-region hosting. This consideration is particularly important for BrainWise, which aims to provide global access to neurological assessment tools.
+Integration with content delivery networks (CDNs) through Next.js's static generation capabilities enhances global accessibility. Wang et al. [42] demonstrated that CDN-delivered applications reduced latency by 40-60% across global regions compared to single-region hosting. This consideration is particularly important for Care4Brain, which aims to provide global access to neurological assessment tools.
 
-Security considerations are paramount in healthcare applications. Sammarco et al. [43] reviewed security patterns in JavaScript frameworks and highlighted Next.js's advantages in preventing common vulnerabilities through its built-in security headers and rendering approaches. BrainWise leverages these features while implementing additional healthcare-specific security measures.
+Security considerations are paramount in healthcare applications. Sammarco et al. [43] reviewed security patterns in JavaScript frameworks and highlighted Next.js's advantages in preventing common vulnerabilities through its built-in security headers and rendering approaches. Care4Brain leverages these features while implementing additional healthcare-specific security measures.
 
 ### 2.7. Research Gap Analysis
 
@@ -196,4 +196,4 @@ Despite significant advancements in both machine learning for neurological appli
 
 7. **Limited Research on Multi-Modal Health Applications**: Few studies examine systems that combine risk prediction, image analysis, and health tracking in unified platforms. Rajkomar et al. [50] suggested that such integrated approaches could provide more comprehensive health insights but noted the lack of implementation examples.
 
-The BrainWise project addresses these gaps by implementing a comprehensive, integrated system that combines multiple prediction models in a user-friendly web application. By documenting the full implementation process, from model development to production deployment, this research contributes valuable insights to both the technical and clinical aspects of neurological health monitoring systems. 
+The Care4Brain project addresses these gaps by implementing a comprehensive, integrated system that combines multiple prediction models in a user-friendly web application. By documenting the full implementation process, from model development to production deployment, this research contributes valuable insights to both the technical and clinical aspects of neurological health monitoring systems. 

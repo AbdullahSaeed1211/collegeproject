@@ -44,7 +44,7 @@ export default function GoalsClient() {
   useEffect(() => {
     const fetchGoals = async () => {
       try {
-        const storedGoals = localStorage.getItem('brainwise_goals');
+        const storedGoals = localStorage.getItem('care4brain_goals');
         if (storedGoals) {
           const parsedGoals = JSON.parse(storedGoals);
           // Convert string dates back to Date objects
@@ -73,7 +73,7 @@ export default function GoalsClient() {
   // Save goals to localStorage whenever they change
   useEffect(() => {
     if (!isLoading) {
-      localStorage.setItem('brainwise_goals', JSON.stringify(goals));
+      localStorage.setItem('care4brain_goals', JSON.stringify(goals));
     }
   }, [goals, isLoading]);
 

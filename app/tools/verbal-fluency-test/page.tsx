@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { VerbalFluencyTest } from "@/components/verbal-fluency-test";
 
 export default function VerbalFluencyTestPage() {

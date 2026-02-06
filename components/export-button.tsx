@@ -145,7 +145,7 @@ export function ExportButton({
             </tbody>
           </table>
           <div class="footer">
-            <p>Generated on ${new Date().toLocaleDateString()} by Brainwise</p>
+            <p>Generated on ${new Date().toLocaleDateString()} by Care4Brain</p>
           </div>
         </body>
       </html>

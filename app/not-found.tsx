@@ -1,10 +1,12 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import { Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | Brainwise",
+  title: "Page Not Found | Care4Brain",
   description: "The page you're looking for doesn't exist or has been moved.",
   robots: {
     index: false,

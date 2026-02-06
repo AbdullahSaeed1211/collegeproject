@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Brainwise",
-  description: "Find answers to common questions about brain health, cognitive training, and using the Brainwise platform.",
+  title: "Frequently Asked Questions | Care4Brain",
+  description: "Find answers to common questions about brain health, cognitive training, and using the Care4Brain platform.",
   keywords: "FAQ, brain health questions, cognitive training help, brain exercises, stroke prevention",
 };
 
@@ -21,7 +23,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
-            Find answers to common questions about brain health, cognitive training, and using the Brainwise platform.
+            Find answers to common questions about brain health, cognitive training, and using the Care4Brain platform.
           </p>
         </div>
 
@@ -40,22 +42,22 @@ export default function FAQPage() {
           <TabsContent value="general" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>About Brainwise</CardTitle>
+                <CardTitle>About Care4Brain</CardTitle>
                 <CardDescription>General information about our platform</CardDescription>
               </CardHeader>
               <CardContent>
                 <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="what-is-brainwise">
-                    <AccordionTrigger>What is Brainwise?</AccordionTrigger>
+                  <AccordionItem value="what-is-care4brain">
+                    <AccordionTrigger>What is Care4Brain?</AccordionTrigger>
                     <AccordionContent>
-                      Brainwise is a comprehensive brain health platform that combines cognitive assessment, brain training exercises, stroke risk prediction, and educational resources. Our mission is to help users understand, monitor, and improve their cognitive health through scientifically-backed tools and information.
+                      Care4Brain is a comprehensive brain health platform that combines cognitive assessment, brain training exercises, stroke risk prediction, and educational resources. Our mission is to help users understand, monitor, and improve their cognitive health through scientifically-backed tools and information.
                     </AccordionContent>
                   </AccordionItem>
                   
                   <AccordionItem value="who-can-use">
-                    <AccordionTrigger>Who can benefit from using Brainwise?</AccordionTrigger>
+                    <AccordionTrigger>Who can benefit from using Care4Brain?</AccordionTrigger>
                     <AccordionContent>
-                      Brainwise is designed for adults of all ages who are interested in maintaining or improving their cognitive health. This includes:
+                      Care4Brain is designed for adults of all ages who are interested in maintaining or improving their cognitive health. This includes:
                       <ul className="list-disc pl-6 mt-2 space-y-1">
                         <li>Adults seeking to maintain cognitive function as they age</li>
                         <li>Individuals with risk factors for stroke or cognitive decline</li>
@@ -67,14 +69,14 @@ export default function FAQPage() {
                   </AccordionItem>
                   
                   <AccordionItem value="scientific-backing">
-                    <AccordionTrigger>Is Brainwise scientifically validated?</AccordionTrigger>
+                    <AccordionTrigger>Is Care4Brain scientifically validated?</AccordionTrigger>
                     <AccordionContent>
-                      Yes, Brainwise is built on evidence-based approaches to cognitive assessment and training. Our tools and content are developed with input from neuroscientists, neuropsychologists, and healthcare professionals. Our stroke risk prediction model is based on established risk factors validated in large-scale studies. We regularly update our platform based on the latest research findings.
+                      Yes, Care4Brain is built on evidence-based approaches to cognitive assessment and training. Our tools and content are developed with input from neuroscientists, neuropsychologists, and healthcare professionals. Our stroke risk prediction model is based on established risk factors validated in large-scale studies. We regularly update our platform based on the latest research findings.
                     </AccordionContent>
                   </AccordionItem>
                   
                   <AccordionItem value="get-started">
-                    <AccordionTrigger>How do I get started with Brainwise?</AccordionTrigger>
+                    <AccordionTrigger>How do I get started with Care4Brain?</AccordionTrigger>
                     <AccordionContent>
                       Getting started is simple:
                       <ol className="list-decimal pl-6 mt-2 space-y-1">
@@ -105,9 +107,9 @@ export default function FAQPage() {
               <CardContent>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="free-vs-premium">
-                    <AccordionTrigger>What features are included in Brainwise?</AccordionTrigger>
+                    <AccordionTrigger>What features are included in Care4Brain?</AccordionTrigger>
                     <AccordionContent>
-                      <p>Brainwise is completely free and includes all of these features:</p>
+                      <p>Care4Brain is completely free and includes all of these features:</p>
                       <ul className="list-disc pl-6 mt-2 mb-4 space-y-1">
                         <li>Comprehensive cognitive assessments</li>
                         <li>Full access to all brain training exercises</li>
@@ -219,7 +221,7 @@ export default function FAQPage() {
                     <AccordionContent>
                       While cognitive training alone has not been definitively proven to prevent dementia or Alzheimer&apos;s disease, there is evidence that a multifaceted approach to brain health may reduce risk or delay onset. The concept of &quot;cognitive reserve&quot; suggests that mentally stimulating activities throughout life can help the brain better cope with pathological changes associated with dementia.
                       
-                      <p className="mt-2">Brainwise promotes a comprehensive approach to brain health that incorporates multiple evidence-based strategies for maintaining cognitive function as you age. However, we caution against any claims of &quot;preventing&quot; neurodegenerative diseases, as these conditions have complex, multifactorial causes that are still being researched.</p>
+                      <p className="mt-2">Care4Brain promotes a comprehensive approach to brain health that incorporates multiple evidence-based strategies for maintaining cognitive function as you age. However, we caution against any claims of &quot;preventing&quot; neurodegenerative diseases, as these conditions have complex, multifactorial causes that are still being researched.</p>
                     </AccordionContent>
                   </AccordionItem>
                   
@@ -288,9 +290,9 @@ export default function FAQPage() {
               <CardContent>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="data-collection">
-                    <AccordionTrigger>What data does Brainwise collect?</AccordionTrigger>
+                    <AccordionTrigger>What data does Care4Brain collect?</AccordionTrigger>
                     <AccordionContent>
-                      <p>Brainwise collects several types of data to provide our services:</p>
+                      <p>Care4Brain collects several types of data to provide our services:</p>
                       <ul className="list-disc pl-6 mt-2 space-y-1">
                         <li>Account information (name, email, demographic information)</li>
                         <li>Assessment results and cognitive performance data</li>

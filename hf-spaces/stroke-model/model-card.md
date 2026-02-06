@@ -104,8 +104,8 @@ The model relies on the following features, ranked by importance:
 If you use this model in research, please cite:
 
 ```
-@misc{brainwise-stroke-prediction,
-  author = {BrainWise Health},
+@misc{care4brain-stroke-prediction,
+  author = {Care4Brain Health},
   title = {Stroke Risk Prediction Model},
   year = {2023},
   publisher = {Hugging Face},

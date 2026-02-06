@@ -25,7 +25,7 @@ export function SocialShare({
   title,
   text,
   url = typeof window !== 'undefined' ? window.location.href : '',
-  hashtags = ["brainwise", "braintraining", "cognition"],
+  hashtags = ["care4brain", "braintraining", "cognition"],
   className = "",
   variant = "outline",
   size = "sm"

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { PatternRecognitionTest } from "@/components/pattern-recognition-test";
 
 export default function PatternRecognitionTestPage() {

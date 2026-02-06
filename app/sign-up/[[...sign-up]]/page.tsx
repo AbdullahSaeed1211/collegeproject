@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { SignUp } from "@clerk/nextjs";
 import { Metadata, Viewport } from "next";
 import { defaultViewport } from "@/lib/meta-config";
@@ -5,8 +7,8 @@ import { defaultViewport } from "@/lib/meta-config";
 export const viewport: Viewport = defaultViewport;
 
 export const metadata: Metadata = {
-  title: "Sign Up | Brainwise",
-  description: "Create a new Brainwise account",
+  title: "Sign Up | Care4Brain",
+  description: "Create a new Care4Brain account",
 };
 
 export default function SignUpPage() {

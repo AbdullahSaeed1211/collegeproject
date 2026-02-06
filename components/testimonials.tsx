@@ -7,37 +7,37 @@ const testimonials = [
     name: "Dr. Sarah Johnson",
     role: "Neurologist",
     img: "/testimonials/doctor1.png",
-    body: "Brainwise has revolutionized how I explain stroke risk factors to my patients. The visual representation of risk factors makes complex medical concepts accessible.",
+    body: "Care4Brain has revolutionized how I explain stroke risk factors to my patients. The visual representation of risk factors makes complex medical concepts accessible.",
   },
   {
     name: "Michael Davis",
     role: "Stroke Survivor",
     img: "/testimonials/patient2.png",
-    body: "After my stroke, I was determined to understand my risk factors better. Brainwise helped me visualize exactly what I needed to focus on for recovery.",
+    body: "After my stroke, I was determined to understand my risk factors better. Care4Brain helped me visualize exactly what I needed to focus on for recovery.",
   },
   {
     name: "Dr. Thomas Chen",
     role: "Research Scientist",
     img: "/testimonials/doctor2.png",
-    body: "The accuracy of Brainwise's stroke prediction model is impressive. It aligns well with clinical standards while being accessible to patients.",
+    body: "The accuracy of Care4Brain's stroke prediction model is impressive. It aligns well with clinical standards while being accessible to patients.",
   },
   {
     name: "Dr. Rebecca Martinez",
     role: "Hospital Director",
     img: "/testimonials/doctor3.png",
-    body: "We've implemented Brainwise in our preventive care program. The engagement from patients has increased dramatically with these visual tools.",
+    body: "We've implemented Care4Brain in our preventive care program. The engagement from patients has increased dramatically with these visual tools.",
   },
   {
     name: "Jane Wilson",
     role: "Caregiver",
     img: "/testimonials/patient1.png",
-    body: "Caring for my father after his stroke was challenging. Brainwise helped our family understand his condition and recovery journey.",
+    body: "Caring for my father after his stroke was challenging. Care4Brain helped our family understand his condition and recovery journey.",
   },
   {
     name: "Dr. Kevin Walker",
     role: "Primary Care Physician",
     img: "/testimonials/doctor4.png",
-    body: "I recommend Brainwise to patients at risk of stroke. The personalized recommendations have helped many take preventive measures seriously.",
+    body: "I recommend Care4Brain to patients at risk of stroke. The personalized recommendations have helped many take preventive measures seriously.",
   },
 ];
 

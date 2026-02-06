@@ -114,7 +114,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <Brain className="h-6 w-6 text-primary" />
-            <span className="font-bold">Brainwise</span>
+            <span className="font-bold">Care4Brain</span>
           </Link>
         </div>
         
@@ -355,7 +355,7 @@ export function Navbar() {
                     onClick={() => setOpen(false)}
                   >
                     <Brain className="h-6 w-6 text-primary" />
-                    <span className="font-bold">Brainwise</span>
+                    <span className="font-bold">Care4Brain</span>
                   </Link>
                   <Button 
                     variant="ghost" 

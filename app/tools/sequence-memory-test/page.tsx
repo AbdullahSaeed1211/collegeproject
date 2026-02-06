@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { SequenceMemoryTest } from "@/components/sequence-memory-test";
 
 export default function SequenceMemoryTestPage() {

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { MoodTracker } from "@/components/mood-tracker";
 
 export default function MoodTrackerPage() {

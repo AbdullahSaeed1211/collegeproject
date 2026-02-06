@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { Metadata } from "next";
 import { 
@@ -16,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Brain Health Library | Brainwise",
+  title: "Brain Health Library | Care4Brain",
   description: "Educational resources about brain health, cognitive functions, and strategies for maintaining optimal brain health throughout life.",
   keywords: "brain health, cognitive functions, neuroplasticity, brain aging, mental health, brain exercises",
 };
@@ -493,7 +495,7 @@ export default function BrainHealthLibraryPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p>
-                  Brainwise offers several assessment tools to help you understand and monitor your brain health over time.
+                  Care4Brain offers several assessment tools to help you understand and monitor your brain health over time.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

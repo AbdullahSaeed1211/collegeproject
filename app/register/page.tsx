@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Metadata } from "next";
 import Link from "next/link";
 import { AlertCircle } from "lucide-react";
@@ -8,8 +10,8 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 export const metadata: Metadata = {
-  title: "Register | Brainwise",
-  description: "Create a new Brainwise account",
+  title: "Register | Care4Brain",
+  description: "Create a new Care4Brain account",
 };
 
 export default function RegisterPage() {

@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,7 +9,7 @@ import { Brain, FileText, Activity, Info, AlertCircle, Trophy, ShieldAlert } fro
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Assessment Report | Brainwise',
+  title: 'Assessment Report | Care4Brain',
   description: 'View your comprehensive cognitive assessment report and track progress over time.',
 };
 

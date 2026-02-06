@@ -1,5 +1,8 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
+
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -240,7 +243,7 @@ export default function StrokePredictorPage() {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
-            'Origin': window.location.origin,
+            'Origin': typeof window !== 'undefined' ? window.location.origin : '',
             'X-Requested-With': 'XMLHttpRequest'
           },
           body: formData,

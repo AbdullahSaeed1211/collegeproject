@@ -1,14 +1,14 @@
 /**
- * Brainwise API Documentation
+ * Care4Brain API Documentation
  * 
- * This file documents all API endpoints available in the Brainwise platform.
+ * This file documents all API endpoints available in the Care4Brain platform.
  * Each endpoint includes information about its purpose, required parameters,
  * authentication requirements, and response format.
  */
 
 export const apiDocumentation = {
   basePath: "/api",
-  baseUrl: "https://brainwise-sigma.vercel.app/api",
+  baseUrl: "https://care4brain-sigma.vercel.app/api",
   
   endpoints: [
     {
@@ -256,7 +256,7 @@ export const apiDocumentation = {
     {
       path: "/newsletter/subscribe",
       method: "POST",
-      description: "Subscribe to the Brainwise newsletter",
+      description: "Subscribe to the Care4Brain newsletter",
       authentication: "Optional - Works for both authenticated and anonymous users",
       requestBody: {
         required: true,
@@ -285,7 +285,7 @@ export const apiDocumentation = {
             "application/json": {
               example: {
                 success: true,
-                message: "Successfully subscribed to the Brainwise newsletter"
+                message: "Successfully subscribed to the Care4Brain newsletter"
               }
             }
           }

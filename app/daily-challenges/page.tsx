@@ -1,10 +1,12 @@
+export const dynamic = "force-dynamic";
+
 import { Metadata } from "next";
 import { Calendar, BarChart3, Trophy } from "lucide-react";
 import { DailyChallenge } from "@/components/daily-challenge";
 import { ChallengeHistory } from "@/components/challenge-history";
 
 export const metadata: Metadata = {
-  title: "Daily Challenges | Brainwise",
+  title: "Daily Challenges | Care4Brain",
   description: "Complete daily cognitive challenges to improve your brain health and track your progress over time.",
 };
 

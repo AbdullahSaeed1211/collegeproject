@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { Metadata } from "next";
 import { 
@@ -13,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Stroke Prevention | Brainwise",
+  title: "Stroke Prevention | Care4Brain",
   description: "Learn about evidence-based strategies to prevent strokes through lifestyle changes, diet, exercise, and health monitoring.",
   keywords: "stroke prevention, brain health, lifestyle changes, diet, exercise, health monitoring",
 };
@@ -326,7 +328,7 @@ export default function StrokePreventionPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <p>
-                  Brainwise offers comprehensive tools to help you understand and monitor your stroke risk factors.
+                  Care4Brain offers comprehensive tools to help you understand and monitor your stroke risk factors.
                   Regular assessment is key to prevention and early intervention.
                 </p>
                 
