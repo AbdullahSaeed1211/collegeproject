@@ -7,6 +7,8 @@ import { FeaturesSection } from "@/components/home/features-section";
 import { ToolsShowcase } from "@/components/home/tools-showcase";
 import { FaqSection } from "@/components/home/faq-section";
 import { CtaSection } from "@/components/home/cta-section";
+import { GamesPreview } from "@/components/home/games-preview";
+import { HowItWorks } from "@/components/home/how-it-works";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -44,6 +46,8 @@ export default function Home() {
     <main className="flex flex-col w-full overflow-hidden">
       <HeroSection />
       <StatsBar />
+      <HowItWorks />
+      <GamesPreview />
       <TestimonialsSection />
       <FeaturesSection />
       <ToolsShowcase />

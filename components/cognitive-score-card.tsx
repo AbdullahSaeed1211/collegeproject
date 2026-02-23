@@ -122,39 +122,22 @@ export function useCognitiveScores() {
                 ];
               }
             } else {
-              // No local storage data, use default demo data
-              scoresData = [
-                { userId: userId || "guest", domain: "Memory", score: 78, previousScore: 72, lastUpdated: new Date().toISOString() },
-                { userId: userId || "guest", domain: "Attention", score: 82, previousScore: 85, lastUpdated: new Date().toISOString() },
-                { userId: userId || "guest", domain: "Processing", score: 65, previousScore: 65, lastUpdated: new Date().toISOString() }
-              ];
+              // No local storage data, use empty array
+              scoresData = [];
             }
           }
         } 
-        // For non-signed in users, fetch from localStorage
+        // For non-signed in users, show empty
         else {
-          console.log('User not signed in, using demo data');
-          setIsUsingMockData(true);
-          scoresData = [
-            { userId: "guest", domain: "Memory", score: 78, previousScore: 72, lastUpdated: new Date().toISOString() },
-            { userId: "guest", domain: "Attention", score: 82, previousScore: 85, lastUpdated: new Date().toISOString() },
-            { userId: "guest", domain: "Processing", score: 65, previousScore: 65, lastUpdated: new Date().toISOString() }
-          ];
+          console.log('User not signed in');
+          scoresData = [];
         }
         
         setCognitiveScores(scoresData);
       } catch (err) {
         console.error('Error in fetchScores:', err);
-        setError('Failed to load cognitive scores. Using demo data instead.');
-        setIsUsingMockData(true);
-        // Always provide demo data on error
-        const demoScores = [
-          { userId: userId || "guest", domain: "Memory", score: 78, previousScore: 72, lastUpdated: new Date().toISOString() },
-          { userId: userId || "guest", domain: "Attention", score: 82, previousScore: 85, lastUpdated: new Date().toISOString() },
-          { userId: userId || "guest", domain: "Processing", score: 65, previousScore: 65, lastUpdated: new Date().toISOString() }
-        ];
-        
-        setCognitiveScores(demoScores);
+        setError('Failed to load cognitive scores.');
+        setCognitiveScores([]);
       } finally {
         setIsLoading(false);
       }

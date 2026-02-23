@@ -6,7 +6,15 @@ import {
   Bell, 
   Download, 
   Shield, 
-  AlertTriangle
+  AlertTriangle,
+  Moon,
+  Sun,
+  Monitor,
+  Clock,
+  User,
+  Mail,
+  Lock,
+  Smartphone
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -16,6 +24,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Dialog,
   DialogContent,
@@ -46,13 +56,27 @@ export function UserSettings({ userId }: UserSettingsProps) {
     clearAll: false
   });
   
+  // Theme settings
+  const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
+  
+  // Reminder settings
+  const [reminderSettings, setReminderSettings] = useState({
+    enabled: true,
+    frequency: "daily" as "daily" | "weekly" | "custom",
+    time: "09:00",
+    days: ["monday", "wednesday", "friday"] as string[],
+    customTime: ""
+  });
+  
   // Settings states
   const [notificationSettings, setNotificationSettings] = useState({
     emailUpdates: true,
     activityReminders: true,
     assessmentResults: true,
     newFeatures: false,
-    marketingEmails: false
+    marketingEmails: false,
+    pushNotifications: true,
+    smsNotifications: false
   });
   
   const [privacySettings, setPrivacySettings] = useState({
@@ -98,7 +122,25 @@ export function UserSettings({ userId }: UserSettingsProps) {
     toast({
       variant: "default",
       title: "Preferences updated",
-      description: `Your notification preferences for account ${userId} have been updated.`,
+      description: `Your notification preferences have been saved.`,
+    });
+  };
+
+  const updateTheme = (newTheme: "light" | "dark" | "system") => {
+    setTheme(newTheme);
+    toast({
+      variant: "default",
+      title: "Theme updated",
+      description: `Theme set to ${newTheme}.`,
+    });
+  };
+
+  const updateReminderSetting = (setting: keyof typeof reminderSettings, value: string | boolean | string[]) => {
+    setReminderSettings(prev => ({ ...prev, [setting]: value }));
+    toast({
+      variant: "default",
+      title: "Reminder settings updated",
+      description: `Your reminder preferences have been saved.`,
     });
   };
   
@@ -191,6 +233,120 @@ export function UserSettings({ userId }: UserSettingsProps) {
       </div>
       
       <Accordion type="single" collapsible className="w-full">
+        <AccordionItem value="appearance">
+          <AccordionTrigger className="hover:no-underline">
+            <div className="flex items-center gap-2">
+              <Sun className="h-5 w-5" />
+              <span>Appearance</span>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent>
+            <Card>
+              <CardContent className="pt-6 space-y-6">
+                <div>
+                  <h3 className="font-medium mb-3">Theme</h3>
+                  <RadioGroup 
+                    value={theme} 
+                    onValueChange={(value) => updateTheme(value as "light" | "dark" | "system")}
+                    className="flex flex-col sm:flex-row gap-4"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="light" id="light" />
+                      <Label htmlFor="light" className="flex items-center gap-2 cursor-pointer">
+                        <Sun className="h-4 w-4" />
+                        Light
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="dark" id="dark" />
+                      <Label htmlFor="dark" className="flex items-center gap-2 cursor-pointer">
+                        <Moon className="h-4 w-4" />
+                        Dark
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="system" id="system" />
+                      <Label htmlFor="system" className="flex items-center gap-2 cursor-pointer">
+                        <Monitor className="h-4 w-4" />
+                        System
+                      </Label>
+                    </div>
+                  </RadioGroup>
+                </div>
+              </CardContent>
+            </Card>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="reminders">
+          <AccordionTrigger className="hover:no-underline">
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5" />
+              <span>Reminders</span>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent>
+            <Card>
+              <CardContent className="pt-6 space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="space-y-0.5">
+                    <Label htmlFor="reminders-enabled">Daily Reminders</Label>
+                    <p className="text-sm text-muted-foreground">
+                      Get reminded to train your brain
+                    </p>
+                  </div>
+                  <Switch
+                    id="reminders-enabled"
+                    checked={reminderSettings.enabled}
+                    onCheckedChange={(checked) => updateReminderSetting('enabled', checked)}
+                  />
+                </div>
+
+                {reminderSettings.enabled && (
+                  <>
+                    <div className="space-y-2">
+                      <Label>Frequency</Label>
+                      <Select 
+                        value={reminderSettings.frequency}
+                        onValueChange={(value) => updateReminderSetting('frequency', value)}
+                      >
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="daily">Daily</SelectItem>
+                          <SelectItem value="weekly">Weekly</SelectItem>
+                          <SelectItem value="custom">Custom Days</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label>Reminder Time</Label>
+                      <Select 
+                        value={reminderSettings.time}
+                        onValueChange={(value) => updateReminderSetting('time', value)}
+                      >
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="06:00">6:00 AM</SelectItem>
+                          <SelectItem value="08:00">8:00 AM</SelectItem>
+                          <SelectItem value="09:00">9:00 AM</SelectItem>
+                          <SelectItem value="12:00">12:00 PM</SelectItem>
+                          <SelectItem value="18:00">6:00 PM</SelectItem>
+                          <SelectItem value="20:00">8:00 PM</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </>
+                )}
+              </CardContent>
+            </Card>
+          </AccordionContent>
+        </AccordionItem>
+        
         <AccordionItem value="notifications">
           <AccordionTrigger className="hover:no-underline">
             <div className="flex items-center gap-2">
@@ -279,6 +435,98 @@ export function UserSettings({ userId }: UserSettingsProps) {
                       updateNotificationSetting('marketingEmails', checked)
                     }
                   />
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="space-y-0.5">
+                    <Label htmlFor="push-notifications">Push Notifications</Label>
+                    <p className="text-sm text-muted-foreground">
+                      Receive push notifications on your device
+                    </p>
+                  </div>
+                  <Switch
+                    id="push-notifications"
+                    checked={notificationSettings.pushNotifications}
+                    onCheckedChange={(checked: boolean) => 
+                      updateNotificationSetting('pushNotifications', checked)
+                    }
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="account">
+          <AccordionTrigger className="hover:no-underline">
+            <div className="flex items-center gap-2">
+              <User className="h-5 w-5" />
+              <span>Account</span>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent>
+            <Card>
+              <CardContent className="pt-6 space-y-4">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-3 rounded-lg border">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-primary/10 p-2 rounded">
+                        <Mail className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Email Address</p>
+                        <p className="text-sm text-muted-foreground">Update your email</p>
+                      </div>
+                    </div>
+                    <Button variant="outline" size="sm">
+                      Change
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center justify-between p-3 rounded-lg border">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-primary/10 p-2 rounded">
+                        <Lock className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Password</p>
+                        <p className="text-sm text-muted-foreground">Change your password</p>
+                      </div>
+                    </div>
+                    <Button variant="outline" size="sm">
+                      Update
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center justify-between p-3 rounded-lg border">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-primary/10 p-2 rounded">
+                        <Smartphone className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Two-Factor Auth</p>
+                        <p className="text-sm text-muted-foreground">Add extra security</p>
+                      </div>
+                    </div>
+                    <Button variant="outline" size="sm">
+                      Enable
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t">
+                  <div className="flex items-center gap-3 p-3 rounded-lg border border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-950">
+                    <AlertTriangle className="h-5 w-5 text-red-500" />
+                    <div className="flex-1">
+                      <p className="font-medium text-red-700 dark:text-red-400">Delete Account</p>
+                      <p className="text-sm text-red-600 dark:text-red-500">
+                        Permanently delete your account and all data
+                      </p>
+                    </div>
+                    <Button variant="destructive" size="sm">
+                      Delete
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>

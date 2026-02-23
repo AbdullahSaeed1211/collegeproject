@@ -42,23 +42,23 @@ export function StatsBar() {
       <div className="container mx-auto py-16 md:py-20 px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-10">
           <StatItem 
-            value="5+" 
-            label="Cognitive Tools" 
+            value="9+" 
+            label="Brain Games" 
             delay={0}
           />
           <StatItem 
-            value="15min" 
-            label="Daily for Results" 
+            value="50K+" 
+            label="Active Users" 
             delay={0.1}
           />
           <StatItem 
-            value="47%" 
-            label="Better Risk Awareness" 
+            value="1M+" 
+            label="Games Played" 
             delay={0.2}
           />
           <StatItem 
-            value="100%" 
-            label="Adult-Optimized" 
+            value="4.8" 
+            label="User Rating" 
             delay={0.3}
           />
         </div>

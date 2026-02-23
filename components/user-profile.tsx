@@ -9,8 +9,11 @@ import { useToast } from "@/hooks/use-toast";
 import { Skeleton } from "@/components/ui/skeleton";
 import { 
   User, FileText, ActivitySquare, Calendar, Clock, Award,
-  AlertTriangle, CheckCircle, ArrowUpRight
+  AlertTriangle, CheckCircle, ArrowUpRight, Edit2, Save, X
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useUser } from "@clerk/nextjs";
 
 interface UserProfileProps {
   user?: {
@@ -18,7 +21,6 @@ interface UserProfileProps {
     name: string;
     email: string;
     image?: string;
-    role: "user" | "doctor" | "admin";
     createdAt: Date;
   };
 }
@@ -42,12 +44,17 @@ interface Assessment {
 
 export function UserProfile({ user }: UserProfileProps) {
   const { toast } = useToast();
+  const { user: clerkUser, isLoaded: isClerkLoaded } = useUser();
   const [healthMetrics, setHealthMetrics] = useState<HealthMetric[]>([]);
   const [assessments, setAssessments] = useState<Assessment[]>([]);
   const [isLoading, setIsLoading] = useState({
     metrics: true,
     assessments: true
   });
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedName, setEditedName] = useState(user?.name || "");
+  const [editedBio, setEditedBio] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
 
   // Fetch health metrics
   useEffect(() => {
@@ -212,8 +219,28 @@ export function UserProfile({ user }: UserProfileProps) {
               )}
             </div>
             <div className="flex-1 space-y-2 text-center md:text-left">
-              <h2 className="text-2xl font-bold">{user.name}</h2>
-              <p className="text-muted-foreground">{user.email}</p>
+              {isEditing ? (
+                <div className="space-y-2">
+                  <Input
+                    value={editedName}
+                    onChange={(e) => setEditedName(e.target.value)}
+                    placeholder="Your name"
+                    className="max-w-xs"
+                  />
+                  <Textarea
+                    value={editedBio}
+                    onChange={(e) => setEditedBio(e.target.value)}
+                    placeholder="Tell us about yourself..."
+                    className="max-w-xs text-sm"
+                    rows={2}
+                  />
+                </div>
+              ) : (
+                <>
+                  <h2 className="text-2xl font-bold">{user.name}</h2>
+                  <p className="text-muted-foreground">{user.email}</p>
+                </>
+              )}
               <div className="flex flex-wrap justify-center gap-2 md:justify-start">
                 <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                   <Calendar className="mr-1 h-3 w-3" />
@@ -223,20 +250,62 @@ export function UserProfile({ user }: UserProfileProps) {
                     day: 'numeric'
                   })}
                 </span>
-                <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  <User className="mr-1 h-3 w-3" />
-                  {user.role === "user" ? "Patient" : user.role}
-                </span>
               </div>
             </div>
             <div className="flex flex-col gap-2 sm:flex-row">
-              <Button variant="outline" size="sm" className="interactive micro-bounce">
-                <FileText className="mr-1 h-4 w-4" />
-                Edit Profile
-              </Button>
-              <Button size="sm" className="interactive micro-bounce">
-                Contact Doctor
-              </Button>
+              {isEditing ? (
+                <>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => setIsEditing(false)}
+                    disabled={isSaving}
+                  >
+                    <X className="mr-1 h-4 w-4" />
+                    Cancel
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    onClick={async () => {
+                      if (!clerkUser || !isClerkLoaded) return;
+                      setIsSaving(true);
+                      try {
+                        const nameParts = editedName.split(' ');
+                        const firstName = nameParts[0] || '';
+                        const lastName = nameParts.slice(1).join(' ') || '';
+                        await clerkUser.update({
+                          firstName,
+                          lastName,
+                        });
+                        toast({ 
+                          title: "Profile updated",
+                          description: "Your profile has been saved successfully",
+                          variant: "default"
+                        });
+                        setIsEditing(false);
+                      } catch (error) {
+                        console.error('Error updating profile:', error);
+                        toast({ 
+                          title: "Error", 
+                          description: "Failed to update profile",
+                          variant: "destructive"
+                        });
+                      } finally {
+                        setIsSaving(false);
+                      }
+                    }}
+                    disabled={isSaving}
+                  >
+                    <Save className="mr-1 h-4 w-4" />
+                    {isSaving ? "Saving..." : "Save"}
+                  </Button>
+                </>
+              ) : (
+                <Button variant="outline" size="sm" onClick={() => setIsEditing(true)}>
+                  <Edit2 className="mr-1 h-4 w-4" />
+                  Edit Profile
+                </Button>
+              )}
             </div>
           </div>
         </CardContent>

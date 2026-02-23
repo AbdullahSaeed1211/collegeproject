@@ -8,6 +8,8 @@ import { WordMemoryTest } from "@/components/word-memory-test";
 import { SequenceMemoryTest } from "@/components/sequence-memory-test";
 import { VerbalFluencyTest } from "@/components/verbal-fluency-test";
 import { PatternRecognitionTest } from "@/components/pattern-recognition-test";
+import { MathChallenge } from "@/components/math-challenge";
+import { StroopTest } from "@/components/stroop-test";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -48,14 +50,16 @@ export default function CognitiveGamesPage() {
       </div>
 
       <Tabs defaultValue="memory" className="w-full">
-        <TabsList className="grid grid-cols-7 mb-4 md:mb-8">
-          <TabsTrigger value="memory" className="text-xs sm:text-sm md:text-base">Memory Game</TabsTrigger>
-          <TabsTrigger value="concentration" className="text-xs sm:text-sm md:text-base">Concentration</TabsTrigger>
-          <TabsTrigger value="reaction" className="text-xs sm:text-sm md:text-base">Reaction Time</TabsTrigger>
-          <TabsTrigger value="word-memory" className="text-xs sm:text-sm md:text-base">Word Memory</TabsTrigger>
-          <TabsTrigger value="sequence-memory" className="text-xs sm:text-sm md:text-base">Sequence Memory</TabsTrigger>
-          <TabsTrigger value="verbal-fluency" className="text-xs sm:text-sm md:text-base">Verbal Fluency</TabsTrigger>
-          <TabsTrigger value="pattern-recognition" className="text-xs sm:text-sm md:text-base">Pattern Recognition</TabsTrigger>
+        <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 mb-4 md:mb-8">
+          <TabsTrigger value="memory" className="text-xs sm:text-sm">Memory</TabsTrigger>
+          <TabsTrigger value="concentration" className="text-xs sm:text-sm">Concentration</TabsTrigger>
+          <TabsTrigger value="reaction" className="text-xs sm:text-sm">Reaction</TabsTrigger>
+          <TabsTrigger value="word-memory" className="text-xs sm:text-sm">Word Memory</TabsTrigger>
+          <TabsTrigger value="sequence-memory" className="text-xs sm:text-sm">Sequence</TabsTrigger>
+          <TabsTrigger value="verbal-fluency" className="text-xs sm:text-sm">Verbal</TabsTrigger>
+          <TabsTrigger value="pattern-recognition" className="text-xs sm:text-sm">Pattern</TabsTrigger>
+          <TabsTrigger value="math-challenge" className="text-xs sm:text-sm">Math</TabsTrigger>
+          <TabsTrigger value="stroop-test" className="text-xs sm:text-sm">Stroop</TabsTrigger>
         </TabsList>
         
         <TabsContent value="memory" className="mt-0">
@@ -97,6 +101,18 @@ export default function CognitiveGamesPage() {
         <TabsContent value="pattern-recognition" className="mt-0">
           <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
             <PatternRecognitionTest />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="math-challenge" className="mt-0">
+          <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
+            <MathChallenge />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="stroop-test" className="mt-0">
+          <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
+            <StroopTest />
           </div>
         </TabsContent>
       </Tabs>

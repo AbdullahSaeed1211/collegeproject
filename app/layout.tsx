@@ -1,6 +1,7 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
@@ -31,6 +32,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://care4brain.pro"),
   alternates: {
     canonical: "https://care4brain.pro",
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Care4Brain",
   },
   openGraph: {
     type: "website",
@@ -71,9 +78,19 @@ export const metadata: Metadata = {
     yandex: "verification_token",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -216,6 +233,7 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
           <Toaster position="bottom-right" />
+          <ServiceWorkerRegistration />
         </body>
       </html>
     </ClerkProvider>

@@ -478,10 +478,47 @@ export function Navbar() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Quick Actions */}
+                    <div className="space-y-3">
+                      <h4 className="flex items-center gap-2 text-sm font-semibold text-primary">
+                        <Activity className="h-4 w-4" /> Quick Actions
+                      </h4>
+                      <div className="ml-6 grid grid-cols-1 gap-3">
+                        <Link
+                          href="/cognitive-games"
+                          className="flex items-center text-sm transition-colors hover:text-primary text-muted-foreground"
+                          onClick={() => setOpen(false)}
+                        >
+                          <Gamepad2 className="h-4 w-4 mr-2" />
+                          Play Games
+                        </Link>
+                        <Link
+                          href="/progress"
+                          className="flex items-center text-sm transition-colors hover:text-primary text-muted-foreground"
+                          onClick={() => setOpen(false)}
+                        >
+                          <LineChart className="h-4 w-4 mr-2" />
+                          My Progress
+                        </Link>
+                        <Link
+                          href="/leaderboard"
+                          className="flex items-center text-sm transition-colors hover:text-primary text-muted-foreground"
+                          onClick={() => setOpen(false)}
+                        >
+                          <BarChart3 className="h-4 w-4 mr-2" />
+                          Leaderboard
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </nav>
                 
-                <div className="border-t pt-6 px-2 mt-auto">
+                <div className="border-t pt-4 px-2 mt-auto">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-muted-foreground">Appearance</span>
+                    <ThemeToggle />
+                  </div>
                   {isSignedIn ? (
                     <div className="flex items-center mt-4">
                       <UserButton 

@@ -48,7 +48,6 @@ export default async function ProfilePage() {
               name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
               email: user.emailAddresses[0]?.emailAddress || '',
               image: user.imageUrl,
-              role: (user.publicMetadata.role as "user" | "doctor" | "admin") || "user",
               createdAt: new Date(user.createdAt),
             }}
           />

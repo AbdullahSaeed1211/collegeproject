@@ -13,6 +13,11 @@ import { useToast } from "@/hooks/use-toast";
 import { useUser } from "@clerk/nextjs";
 import { format } from "date-fns";
 import { RecentActivity } from "@/components/recent-activity";
+import { useGameResults } from "@/hooks/use-game-results";
+import { Trophy, Gamepad2, Flame } from "lucide-react";
+import { Leaderboard } from "@/components/leaderboard";
+import { Achievements } from "@/components/achievements";
+import { StreakTracker, StreakRewards } from "@/components/streak-tracker";
 
 // Define health metrics types
 interface HealthMetric {
@@ -71,6 +76,7 @@ export default function DashboardClient() {
   const [isLoading, setIsLoading] = useState(true);
   const [healthMetrics, setHealthMetrics] = useState<HealthMetric[]>([]);
   const { toast } = useToast();
+  const { results: gameResults, isLoading: isGamesLoading } = useGameResults();
 
   // Fetch user data when component mounts
   useEffect(() => {
@@ -180,6 +186,95 @@ export default function DashboardClient() {
         </Card>
       </div>
       
+      {/* Game Stats Row */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-muted-foreground">Games Played</p>
+                <p className="text-3xl font-bold">{isGamesLoading ? "..." : gameResults.length}</p>
+              </div>
+              <div className="bg-primary/10 p-3 rounded-full">
+                <Gamepad2 className="h-6 w-6 text-primary" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-muted-foreground">Total Score</p>
+                <p className="text-3xl font-bold">
+                  {isGamesLoading ? "..." : gameResults.reduce((sum, r) => sum + (r.score || 0), 0).toLocaleString()}
+                </p>
+              </div>
+              <div className="bg-yellow-500/10 p-3 rounded-full">
+                <Trophy className="h-6 w-6 text-yellow-500" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-muted-foreground">Streak</p>
+                <p className="text-3xl font-bold">{isGamesLoading ? "..." : "3"} days</p>
+              </div>
+              <div className="bg-orange-500/10 p-3 rounded-full">
+                <Flame className="h-6 w-6 text-orange-500" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+      
+      {/* Recent Games */}
+      {!isGamesLoading && gameResults.length > 0 && (
+        <Card className="mb-6">
+          <CardHeader className="pb-2">
+            <div className="flex justify-between items-center">
+              <div>
+                <CardTitle>Recent Games</CardTitle>
+                <CardDescription>Your latest game sessions</CardDescription>
+              </div>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/cognitive-games">
+                  Play More
+                </Link>
+              </Button>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {gameResults.slice(0, 5).map((game) => (
+                <div key={game.id} className="flex items-center justify-between p-3 rounded-lg border">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-primary/10 p-2 rounded">
+                      <Brain className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium capitalize">{game.gameType?.replace(/-/g, ' ') || 'Game'}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {new Date(game.completedAt).toLocaleDateString()}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-bold">{game.score}</p>
+                    <p className="text-xs text-muted-foreground">points</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+      
       {/* Health Metrics Card */}
       <Card className="mb-6">
         <CardHeader className="pb-2">
@@ -272,13 +367,30 @@ export default function DashboardClient() {
       
       <Tabs defaultValue="activity" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="activity">Recent Activity</TabsTrigger>
+          <TabsTrigger value="activity">Activity</TabsTrigger>
+          <TabsTrigger value="streaks">Streaks</TabsTrigger>
+          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+          <TabsTrigger value="achievements">Achievements</TabsTrigger>
           <TabsTrigger value="insights">Insights</TabsTrigger>
-          <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
         
         <TabsContent value="activity">
           <RecentActivity />
+        </TabsContent>
+
+        <TabsContent value="streaks" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <StreakTracker />
+            <StreakRewards />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="leaderboard">
+          <Leaderboard />
+        </TabsContent>
+
+        <TabsContent value="achievements">
+          <Achievements />
         </TabsContent>
         
         <TabsContent value="insights" className="space-y-4">

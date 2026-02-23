@@ -56,3 +56,5 @@ hf-spaces/*/*.h5
 
 # Embedded repositories
 rttr1-brain-tumor/
+# clerk configuration (can include secrets)
+/.clerk/
