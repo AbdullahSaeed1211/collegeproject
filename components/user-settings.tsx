@@ -26,6 +26,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { NotificationSettings } from "@/components/push-notifications";
 import {
   Dialog,
   DialogContent,
@@ -344,6 +345,7 @@ export function UserSettings({ userId }: UserSettingsProps) {
                 )}
               </CardContent>
             </Card>
+            <NotificationSettings />
           </AccordionContent>
         </AccordionItem>
         

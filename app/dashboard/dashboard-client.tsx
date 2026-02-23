@@ -18,6 +18,8 @@ import { Trophy, Gamepad2, Flame } from "lucide-react";
 import { Leaderboard } from "@/components/leaderboard";
 import { Achievements } from "@/components/achievements";
 import { StreakTracker, StreakRewards } from "@/components/streak-tracker";
+import { OnboardingFlow } from "@/components/onboarding-flow";
+import { useOnboarding } from "@/hooks/use-onboarding";
 
 // Define health metrics types
 interface HealthMetric {
@@ -77,6 +79,7 @@ export default function DashboardClient() {
   const [healthMetrics, setHealthMetrics] = useState<HealthMetric[]>([]);
   const { toast } = useToast();
   const { results: gameResults, isLoading: isGamesLoading } = useGameResults();
+  const { showOnboarding, completeOnboarding } = useOnboarding();
 
   // Fetch user data when component mounts
   useEffect(() => {
@@ -474,6 +477,10 @@ export default function DashboardClient() {
           </Card>
         </TabsContent>
       </Tabs>
+
+      {showOnboarding && (
+        <OnboardingFlow onComplete={completeOnboarding} />
+      )}
     </div>
   );
 } 
