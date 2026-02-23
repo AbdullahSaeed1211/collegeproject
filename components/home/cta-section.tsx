@@ -2,144 +2,89 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
-import { AvatarCircles } from "@/components/ui/avatar-circles";
+import { ArrowRight, CheckCircle, Brain, Zap, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, useEffect, useMemo } from "react";
+
+const TRANSFORMATION = [
+  { before: "Can't remember names", after: "Names stick easily", icon: <Brain className="h-5 w-5" /> },
+  { before: "Mind feels foggy", after: "Mental clarity", icon: <Zap className="h-5 w-5" /> },
+  { before: "Scattered focus", after: "Sharp concentration", icon: <Trophy className="h-5 w-5" /> },
+];
 
 export function CtaSection() {
-  // Wrap the users array in useMemo to prevent recreation on each render
-  const recentUsers = useMemo(() => [
-    { name: "Alex Johnson", fallback: "AJ", image: "/avatars/user1.png" },
-    { name: "Maria Garcia", fallback: "MG", image: "/avatars/user2.png" },
-    { name: "David Lee", fallback: "DL", image: "/avatars/user3.png" },
-    { name: "Sarah Wilson", fallback: "SW", image: "/avatars/user4.png" },
-    { name: "James Brown", fallback: "JB", image: "/avatars/user5.png" },
-    { name: "Emma Davis", fallback: "ED", image: "/avatars/user6.png" },
-    { name: "Olivia Chen", fallback: "OC", image: "/avatars/user7.png" },
-  ], []); // Empty dependency array means this only runs once
-
-  // Create a state for the users to display
-  const [displayUsers, setDisplayUsers] = useState(recentUsers);
-  
-  // Use the memoized recentUsers in the effect
-  useEffect(() => {
-    const shuffled = [...recentUsers].sort(() => Math.random() - 0.5);
-    setDisplayUsers(shuffled);
-  }, [recentUsers]); // Now this is safe because recentUsers is memoized
-
-  const benefitItems = [
-    {
-      title: "Personalized Risk Assessment",
-      description: "Get insights tailored to your health profile"
-    },
-    {
-      title: "Progress Tracking",
-      description: "Monitor improvements in cognitive performance"
-    },
-    {
-      title: "5+ Brain Training Tools",
-      description: "Access our complete cognitive training suite"
-    },
-    {
-      title: "Evidence-Based Resources",
-      description: "Access scientifically vetted information"
-    }
-  ];
-
   return (
-    <section className="py-20 px-4 md:px-6 bg-destructive/10">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 md:py-32 px-4 md:px-6 bg-gradient-to-b from-primary/5 to-primary/10">
+      <div className="container mx-auto max-w-4xl text-center">
         <motion.div
-          className="bg-card rounded-2xl p-8 md:p-12 border shadow-lg relative overflow-hidden"
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="space-y-6"
         >
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-5 pointer-events-none">
-            <div className="absolute top-0 left-0 w-72 h-72 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full translate-x-1/3 translate-y-1/3 mix-blend-multiply"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
-            <motion.div 
-              className="space-y-6"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <motion.span 
-                className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-md text-sm font-medium mb-2"
-                initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3 }}
-              >
-                Limited Time Offer
-              </motion.span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Start your brain health journey today</h2>
-              <p className="text-xl text-muted-foreground">
-                Join thousands of users who are actively improving their cognitive function and reducing health risks.
-              </p>
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 pt-4"
+          {/* Urgency */}
+          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+            Start training in the next 5 minutes
+          </span>
+
+          {/* Headline */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            Your Brain Is Waiting.
+            <br />
+            <span className="text-primary">Are You Ready?</span>
+          </h2>
+
+          {/* Transformation */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mb-8">
+            {TRANSFORMATION.map((item, index) => (
+              <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center gap-3 bg-card rounded-xl p-4 border"
               >
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-md">Create Free Account</Button>
-                <Button size="lg" variant="outline" className="hover:bg-muted/30 text-foreground" asChild>
-                  <Link href="/tools">
-                    Explore Tools First
-                  </Link>
-                </Button>
+                <div className="text-primary">{item.icon}</div>
+                <div className="text-left">
+                  <p className="text-sm text-muted-foreground line-through">{item.before}</p>
+                  <p className="font-medium text-foreground">{item.after}</p>
+                </div>
               </motion.div>
-              
-              <motion.div 
-                className="flex items-center space-y-0 space-x-4 pt-2"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <AvatarCircles people={displayUsers} numPeople={5000} limit={5} />
-                <p className="text-sm text-muted-foreground">5,000+ users joined this month</p>
-              </motion.div>
-            </motion.div>
-            
-            <motion.div 
-              className="space-y-4"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              {benefitItems.map((item, index) => (
-                <motion.div 
-                  key={index}
-                  className="flex items-start gap-3"
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.4 + (index * 0.1) }}
-                >
-                  <div className="bg-primary/20 p-2 rounded-full mt-1">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+            ))}
           </div>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-base px-8 py-6" asChild>
+              <Link href="/cognitive-games">
+                Start Training Free <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+
+          {/* Risk Reversal */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mt-6">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>Free forever</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>No credit card required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>Cancel anytime</span>
+            </div>
+          </div>
+
+          {/* Social Proof */}
+          <p className="text-sm text-muted-foreground mt-4">
+            Join <span className="font-semibold text-foreground">50,000+</span> people who train their brains daily
+          </p>
         </motion.div>
       </div>
     </section>
   );
-} 
+}

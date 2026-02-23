@@ -1,23 +1,22 @@
 export const dynamic = "force-dynamic";
 
 import { HeroSection } from "@/components/home/hero-section";
-import { StatsBar } from "@/components/home/stats-bar";
-import { TestimonialsSection } from "@/components/home/testimonials-section";
+import { ProblemAgitation } from "@/components/home/problem-agitation";
 import { FeaturesSection } from "@/components/home/features-section";
-import { ToolsShowcase } from "@/components/home/tools-showcase";
+import { GamesPreview } from "@/components/home/games-preview";
+import { TestimonialsSection } from "@/components/home/testimonials-section";
+import { HowItWorks } from "@/components/home/how-it-works";
 import { FaqSection } from "@/components/home/faq-section";
 import { CtaSection } from "@/components/home/cta-section";
-import { GamesPreview } from "@/components/home/games-preview";
-import { HowItWorks } from "@/components/home/how-it-works";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Care4Brain: Brain Health & Cognitive Training Platform",
-  description: "Improve your brain health, assess stroke risk, and enhance cognitive abilities with science-backed tools and training games.",
-  keywords: "brain health, cognitive training, stroke prediction, alzheimer's risk, memory games, brain exercises",
+  title: "Train Your Brain | Science-Backed Cognitive Training",
+  description: "Boost memory, focus, and processing speed with 10 minutes of daily brain training. Join 50,000+ people sharpening their minds with science-backed games.",
+  keywords: "brain training, cognitive games, memory improvement, focus training, brain exercises, mental fitness",
   openGraph: {
-    title: "Care4Brain: Brain Health & Cognitive Training Platform",
-    description: "Improve your brain health, assess stroke risk, and enhance cognitive abilities with science-backed tools and training games.",
+    title: "Train Your Brain | Science-Backed Cognitive Training",
+    description: "Boost memory, focus, and processing speed with 10 minutes of daily brain training. Join 50,000+ people sharpening their minds.",
     url: "https://care4brain.vercel.app",
     type: "website",
     images: [
@@ -25,14 +24,14 @@ export const metadata: Metadata = {
         url: "/images/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Care4Brain Brain Health Platform"
+        alt: "Brain Training Platform"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Care4Brain: Brain Health & Cognitive Training Platform",
-    description: "Improve your brain health, assess stroke risk, and enhance cognitive abilities with science-backed tools and training games.",
+    title: "Train Your Brain | Science-Backed Cognitive Training",
+    description: "Boost memory, focus, and processing speed with 10 minutes of daily brain training.",
     images: ["/images/og-home.jpg"]
   },
   robots: {
@@ -45,12 +44,11 @@ export default function Home() {
   return (
     <main className="flex flex-col w-full overflow-hidden">
       <HeroSection />
-      <StatsBar />
-      <HowItWorks />
-      <GamesPreview />
-      <TestimonialsSection />
+      <ProblemAgitation />
       <FeaturesSection />
-      <ToolsShowcase />
+      <GamesPreview />
+      <HowItWorks />
+      <TestimonialsSection />
       <FaqSection />
       <CtaSection />
     </main>
