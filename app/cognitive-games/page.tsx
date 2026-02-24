@@ -10,6 +10,7 @@ import { VerbalFluencyTest } from "@/components/verbal-fluency-test";
 import { PatternRecognitionTest } from "@/components/pattern-recognition-test";
 import { MathChallenge } from "@/components/math-challenge";
 import { StroopTest } from "@/components/stroop-test";
+// Removed unused cognitive game imports - these components are not rendered on this page yet
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -50,16 +51,19 @@ export default function CognitiveGamesPage() {
       </div>
 
       <Tabs defaultValue="memory" className="w-full">
-        <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 mb-4 md:mb-8">
+        <TabsList className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 mb-4 md:mb-8">
           <TabsTrigger value="memory" className="text-xs sm:text-sm">Memory</TabsTrigger>
-          <TabsTrigger value="concentration" className="text-xs sm:text-sm">Concentration</TabsTrigger>
+          <TabsTrigger value="concentration" className="text-xs sm:text-sm">Focus</TabsTrigger>
           <TabsTrigger value="reaction" className="text-xs sm:text-sm">Reaction</TabsTrigger>
-          <TabsTrigger value="word-memory" className="text-xs sm:text-sm">Word Memory</TabsTrigger>
+          <TabsTrigger value="word-memory" className="text-xs sm:text-sm">Words</TabsTrigger>
           <TabsTrigger value="sequence-memory" className="text-xs sm:text-sm">Sequence</TabsTrigger>
           <TabsTrigger value="verbal-fluency" className="text-xs sm:text-sm">Verbal</TabsTrigger>
           <TabsTrigger value="pattern-recognition" className="text-xs sm:text-sm">Pattern</TabsTrigger>
           <TabsTrigger value="math-challenge" className="text-xs sm:text-sm">Math</TabsTrigger>
           <TabsTrigger value="stroop-test" className="text-xs sm:text-sm">Stroop</TabsTrigger>
+          <TabsTrigger value="dual-n-back" className="text-xs sm:text-sm">N-Back</TabsTrigger>
+          <TabsTrigger value="color-match" className="text-xs sm:text-sm">Colors</TabsTrigger>
+          <TabsTrigger value="simon-says" className="text-xs sm:text-sm">Simon</TabsTrigger>
         </TabsList>
         
         <TabsContent value="memory" className="mt-0">

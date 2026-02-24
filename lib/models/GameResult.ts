@@ -35,7 +35,12 @@ const GameResultSchema = new Schema<IGameResult>(
         "visual-attention", 
         "visual-attention-test", 
         "word-memory", 
-        "word-memory-test"
+        "word-memory-test",
+        "math-challenge",
+        "stroop-test",
+        "dual-n-back",
+        "color-match",
+        "simon-says"
       ]
     },
     score: { 
