@@ -1,0 +1,118 @@
+---
+title: Brainwise - AI-Generated Documentation
+description: Full-text crawl of Brainwise website for AI/LLM training
+---
+
+# Brainwise Website Documentation
+
+## Overview
+Brainwise is a comprehensive web application for brain health monitoring, stroke prediction, and cognitive enhancement. The platform offers health tracking, AI-powered assessments, cognitive training games, and educational resources.
+
+## Core Features
+
+### 1. Cognitive Games
+Interactive brain training exercises designed to improve memory, attention, and processing speed.
+
+- **Memory Games**: Memory Game, Concentration, Word Memory, Sequence Memory
+- **Focus Games**: Dual N-Back, Color Match, Simon Says
+- **Reaction Games**: Reaction Time, Stroop Test
+- **Pattern Recognition**: Pattern Recognition Test, Math Challenge
+- **Verbal Skills**: Verbal Fluency Test
+
+### 2. Health Metrics Tracking
+Monitor vital signs and health indicators that affect brain health including blood pressure, heart rate, cholesterol levels, blood glucose, BMI, and lifestyle factors.
+
+### 3. Stroke Risk Prediction
+AI-powered stroke risk assessment using machine learning models. Users can input their health metrics to receive a personalized risk score and recommendations.
+
+### 4. Brain Scan Analysis
+Detect brain tumors and Alzheimer's disease from MRI scans using AI-powered analysis tools.
+
+### 5. Research & Studies
+Access to latest peer-reviewed research on brain health and stroke prevention through Semantic Scholar API integration.
+
+### 6. Educational Resources
+Curated guides and video content from trusted sources about brain health, stroke prevention, and cognitive improvement techniques.
+
+### 7. Progress Tracking
+Track your cognitive performance over time with detailed charts and visualizations. Set goals and monitor improvements.
+
+### 8. Leaderboard
+Compete with other users and see how your cognitive scores compare.
+
+## Page Structure
+
+### Public Pages
+- **Home** (/) - Landing page with hero, features, testimonials, FAQ, CTA
+- **Cognitive Games** (/cognitive-games) - Interactive brain training games
+- **Brain Health** (/brain-health) - Brain health information and resources
+- **Stroke Prediction** (/stroke-prediction) - Stroke risk assessment tool
+- **Stroke Prevention** (/stroke-prevention) - Prevention tips and guidelines
+- **Health Metrics** (/health-metrics) - Health tracking dashboard
+- **Tools** (/tools) - Collection of brain training tools
+- **Research** (/research) - Research papers and studies
+- **About** (/about) - About Brainwise
+- **FAQ** (/faq) - Frequently asked questions
+- **Contact** (/contact) - Contact information
+- **Privacy** (/privacy) - Privacy policy
+- **Terms** (/terms) - Terms of service
+
+### Authenticated Pages
+- **Dashboard** (/dashboard) - User dashboard with overview
+- **Profile** (/profile) - User profile management
+- **Progress** (/progress) - Track your progress over time
+- **Goals** (/progress/goals) - Set and track goals
+- **Leaderboard** (/leaderboard) - User rankings
+
+### AI/ML Tools
+- **Tumor Detection** (/predictors/tumor) - Brain tumor detection from MRI
+- **Alzheimer's Detection** (/predictors/alzheimers) - Alzheimer's disease screening
+- **Stroke Prediction** (/predictors/stroke) - Stroke risk prediction
+
+## Cognitive Games Details
+
+### Memory Training
+- **Memory Game**: Classic card matching game
+- **Concentration Game**: Focus and attention training
+- **Word Memory Test**: Remember words in sequence
+- **Sequence Memory Test**: Remember and repeat sequences
+
+### Attention Training
+- **Dual N-Back**: Working memory training (N-back task)
+- **Visual Attention**: Visual search and attention tasks
+- **Stroop Test**: Color-word interference test
+
+### Processing Speed
+- **Reaction Game**: Measure reaction time
+- **Math Challenge**: Quick mental math exercises
+- **Color Match**: Color-word matching speed test
+- **Simon Says**: Pattern memory and recall
+
+### Executive Function
+- **Verbal Fluency Test**: Word generation challenges
+- **Pattern Recognition**: Identify patterns in sequences
+
+## Technology Stack
+
+- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend**: Next.js API Routes, MongoDB
+- **Machine Learning**: Hugging Face Spaces, TensorFlow.js
+- **Image Handling**: Uploadcare CDN
+- **Authentication**: Clerk
+- **Research API**: Semantic Scholar API
+- **Visualization**: Recharts, Framer Motion
+
+## Brand Information
+
+- **Name**: Brainwise
+- **Tagline**: Train Your Brain, Sharpen Your Mind
+- **Description**: Science-backed games that boost memory, focus, and processing speed in just 10 minutes a day.
+- **Website**: https://brainwise.com
+
+## Contact
+- Email: support@brainwise.com
+- Website: https://brainwise.com/contact
+
+## Legal
+- Privacy Policy: https://brainwise.com/privacy
+- Terms of Service: https://brainwise.com/terms

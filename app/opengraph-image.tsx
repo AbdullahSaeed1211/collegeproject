@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'Care4Brain.pro - Advanced brain health monitoring and assessments'
+export const alt = 'Brainwise.com - Advanced brain health monitoring and assessments'
 export const size = {
   width: 1200,
   height: 630,
