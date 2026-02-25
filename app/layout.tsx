@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Care4Brain Team" }],
   creator: "Care4Brain",
   publisher: "Care4Brain",
-  metadataBase: new URL("https://care4brain.pro"),
+  metadataBase: new URL("https://brain.abdullahsaeed.me"),
   alternates: {
-    canonical: "https://care4brain.pro",
+    canonical: "https://brain.abdullahsaeed.me",
   },
   manifest: "/site.webmanifest",
   appleWebApp: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://care4brain.pro",
+    url: "https://brain.abdullahsaeed.me",
     title: "Care4Brain: Complete Brain Health Toolkit",
     description: "Train, assess, and optimize your brain health with our comprehensive suite of cognitive tools",
     siteName: "Care4Brain",

@@ -107,12 +107,12 @@ Compete with other users and see how your cognitive scores compare.
 - **Name**: Care4Brain
 - **Tagline**: Train Your Brain, Sharpen Your Mind
 - **Description**: Science-backed games that boost memory, focus, and processing speed in just 10 minutes a day.
-- **Website**: https://care4brain.pro
+- **Website**: https://brain.abdullahsaeed.me
 
 ## Contact
 - Email: support@care4brain.pro
-- Website: https://care4brain.pro/contact
+- Website: https://brain.abdullahsaeed.me/contact
 
 ## Legal
-- Privacy Policy: https://care4brain.pro/privacy
-- Terms of Service: https://care4brain.pro/terms
+- Privacy Policy: https://brain.abdullahsaeed.me/privacy
+- Terms of Service: https://brain.abdullahsaeed.me/terms

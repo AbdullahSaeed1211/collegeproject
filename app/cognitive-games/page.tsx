@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Brain Training Games | Care4Brain",
     description: "Enhance your cognitive abilities with fun, interactive games designed to improve memory, attention, and processing speed.",
-    url: "https://care4brain.pro/cognitive-games",
+    url: "https://brain.abdullahsaeed.me/cognitive-games",
     type: "website",
     images: [
       {

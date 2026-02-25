@@ -146,7 +146,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📱 Contact
 
-Project Link: [https://github.com/AbdullahSaeed1211/brainwise](https://github.com/AbdullahSaeed1211/brainwise)
+Project Link: [https://github.com/AbdullahSaeed1211/care4brain](https://github.com/AbdullahSaeed1211/care4brain)
 
 ## 🙏 Acknowledgements
 

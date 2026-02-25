@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
         '/admin/',
       ],
     },
-    sitemap: 'https://care4brain.pro/sitemap.xml',
-    host: 'https://care4brain.pro',
+    sitemap: 'https://brain.abdullahsaeed.me/sitemap.xml',
+    host: 'https://brain.abdullahsaeed.me',
   };
 }
