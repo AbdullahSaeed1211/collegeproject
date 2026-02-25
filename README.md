@@ -1,4 +1,4 @@
-# Brainwise
+# Care4Brain
 
 Brainwise is a comprehensive web application designed to help users with brain health monitoring, stroke prediction, and cognitive enhancement through health tracking, personalized goals, and educational resources.
 
@@ -12,6 +12,7 @@ Brainwise is a comprehensive web application designed to help users with brain h
 - **Cognitive Training Tools**: Interactive games and exercises for brain health improvement (Memory, Focus, Mental Speed)
 - **Data Visualization**: View your progress through interactive charts and visualizations
 - **Problem Agitation**: Targeted sections highlighting cognitive pain points to drive engagement
+- **Brainwise** -> **Care4Brain** - project rename reverted due to trademark issue
 
 ## 🚀 Getting Started
 
@@ -28,8 +29,8 @@ Brainwise is a comprehensive web application designed to help users with brain h
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/AbdullahSaeed1211/brainwise.git
-   cd brainwise
+   git clone https://github.com/AbdullahSaeed1211/care4brain.git
+   cd care4brain
    ```
 
 2. Install dependencies
@@ -74,7 +75,7 @@ Detailed documentation can be found in the `/docs` directory:
 ## 🧩 Project Structure
 
 ```
-brainwise/
+care4brain/
 ├── app/                  # Next.js 14+ App Router pages & API routes
 │   ├── api/             # API routes for ML models and data
 │   ├── cognitive-games/ # Interactive brain training games

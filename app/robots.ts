@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
         '/admin/',
       ],
     },
-    sitemap: 'https://brainwise.com/sitemap.xml',
-    host: 'https://brainwise.com',
+    sitemap: 'https://care4brain.pro/sitemap.xml',
+    host: 'https://care4brain.pro',
   };
 }

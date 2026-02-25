@@ -3,10 +3,10 @@ title: Brainwise - AI-Generated Documentation
 description: Full-text crawl of Brainwise website for AI/LLM training
 ---
 
-# Brainwise Website Documentation
+# Care4Brain Website Documentation
 
 ## Overview
-Brainwise is a comprehensive web application for brain health monitoring, stroke prediction, and cognitive enhancement. The platform offers health tracking, AI-powered assessments, cognitive training games, and educational resources.
+Care4Brain is a comprehensive web application for brain health monitoring, stroke prediction, and cognitive enhancement. The platform offers health tracking, AI-powered assessments, cognitive training games, and educational resources.
 
 ## Core Features
 
@@ -104,15 +104,15 @@ Compete with other users and see how your cognitive scores compare.
 
 ## Brand Information
 
-- **Name**: Brainwise
+- **Name**: Care4Brain
 - **Tagline**: Train Your Brain, Sharpen Your Mind
 - **Description**: Science-backed games that boost memory, focus, and processing speed in just 10 minutes a day.
-- **Website**: https://brainwise.com
+- **Website**: https://care4brain.pro
 
 ## Contact
-- Email: support@brainwise.com
-- Website: https://brainwise.com/contact
+- Email: support@care4brain.pro
+- Website: https://care4brain.pro/contact
 
 ## Legal
-- Privacy Policy: https://brainwise.com/privacy
-- Terms of Service: https://brainwise.com/terms
+- Privacy Policy: https://care4brain.pro/privacy
+- Terms of Service: https://care4brain.pro/terms

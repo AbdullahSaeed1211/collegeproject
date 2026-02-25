@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://brainwise.com';
+  const baseUrl = 'https://care4brain.pro';
 
   return [
     {
