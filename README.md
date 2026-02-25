@@ -1,40 +1,42 @@
-# Care4Brain
+# Brainwise
 
-Care4Brain is a comprehensive web application designed to help users with brain health monitoring, stroke prediction, and cognitive enhancement through health tracking, personalized goals, and educational resources.
+Brainwise is a comprehensive web application designed to help users with brain health monitoring, stroke prediction, and cognitive enhancement through health tracking, personalized goals, and educational resources.
 
 ## 🧠 Features
 
 - **Health Metrics Tracking**: Monitor vital signs and health indicators that affect brain health
 - **Stroke Risk Prediction**: AI-powered stroke risk assessment using machine learning models
-- **Brain Scan Analysis**: Detect brain tumors and Alzheimer's disease from MRI scans
+- **Brain Scan Analysis**: detect brain tumors and Alzheimer's disease from MRI scans
 - **Research & Studies**: Access to latest peer-reviewed research on brain health and stroke prevention
 - **Educational Resources**: Curated guides and video content from trusted sources
-- **Cognitive Training Tools**: Interactive exercises for brain health improvement
+- **Cognitive Training Tools**: Interactive games and exercises for brain health improvement (Memory, Focus, Mental Speed)
 - **Data Visualization**: View your progress through interactive charts and visualizations
+- **Problem Agitation**: Targeted sections highlighting cognitive pain points to drive engagement
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js 18+ 
-- npm or yarn
+- pnpm (recommended) or npm/yarn
 - MongoDB instance (local or Atlas)
 - Uploadcare account (for image handling)
 - Hugging Face account (for ML model hosting)
+- Clerk account (for authentication)
 
 ### Installation
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/AbdullahSaeed1211/care4brain.git
-   cd care4brain
+   git clone https://github.com/AbdullahSaeed1211/brainwise.git
+   cd brainwise
    ```
 
 2. Install dependencies
    ```bash
-   npm install
+   pnpm install
    # or
-   yarn install
+   npm install
    ```
 
 3. Set up environment variables
@@ -44,13 +46,15 @@ Care4Brain is a comprehensive web application designed to help users with brain 
    NEXT_PUBLIC_UPLOADCARE_PUBLIC_KEY=your_uploadcare_public_key
    UPLOADCARE_SECRET_KEY=your_uploadcare_secret_key
    SEMANTIC_SCHOLAR_API_KEY=your_api_key
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
    ```
 
 4. Run the development server
    ```bash
-   npm run dev
+   pnpm run dev
    # or
-   yarn dev
+   npm run dev
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
@@ -70,14 +74,16 @@ Detailed documentation can be found in the `/docs` directory:
 ## 🧩 Project Structure
 
 ```
-care4brain/
-├── app/                  # Next.js 14 App Router pages & API routes
+brainwise/
+├── app/                  # Next.js 14+ App Router pages & API routes
 │   ├── api/             # API routes for ML models and data
+│   ├── cognitive-games/ # Interactive brain training games
 │   ├── predictors/      # Brain scan analysis tools (tumor, alzheimers)
 │   ├── research/        # Research papers and studies
 │   ├── tools/           # Brain health tools and assessments
 │   └── dashboard/       # User dashboard and metrics
 ├── components/          # React components
+│   ├── home/           # Landing page sections (hero, features, cta, etc.)
 │   ├── ui/             # Shadcn UI components
 │   ├── charts/         # Data visualization components
 │   └── forms/          # Form components
@@ -105,10 +111,12 @@ care4brain/
 - [x] Alzheimer's detection model
 - [x] Research paper integration
 - [x] Educational resources
-- [x] Cognitive training tools
+- [x] Cognitive training tools (games)
+- [x] Landing page overhaul with Problem Agitation
 - [ ] Advanced data analytics dashboard
 - [ ] Mobile optimization
 - [ ] Newsletter system
+- [ ] User progress tracking & gamification
 
 ## 🔒 Security & Privacy
 
@@ -137,7 +145,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📱 Contact
 
-Project Link: [https://github.com/AbdullahSaeed1211/care4brain](https://github.com/AbdullahSaeed1211/care4brain)
+Project Link: [https://github.com/AbdullahSaeed1211/brainwise](https://github.com/AbdullahSaeed1211/brainwise)
 
 ## 🙏 Acknowledgements
 
