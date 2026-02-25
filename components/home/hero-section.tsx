@@ -8,7 +8,10 @@ import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 
 export function HeroSection() {
   return (
-    <section className="relative pt-16 md:pt-24 pb-20 md:pb-32 px-4 md:px-6 overflow-hidden">
+    <section 
+      className="relative pt-16 md:pt-24 pb-20 md:pb-32 px-4 md:px-6 overflow-hidden"
+      aria-labelledby="hero-heading"
+    >
       {/* Grid background pattern */}
       <div className="absolute inset-0 -z-10 bg-[length:20px_20px] bg-center [background-image:linear-gradient(rgba(var(--magic-primary),0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--magic-primary),0.05)_1px,transparent_1px)]"></div>
       
@@ -30,7 +33,7 @@ export function HeroSection() {
             </div>
 
             {/* Headline - Max 8 words */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
               Train Your Brain,{" "}
               <span className="magic-gradient-text">Sharpen Your Mind</span>
             </h1>

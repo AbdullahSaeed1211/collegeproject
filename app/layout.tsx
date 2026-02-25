@@ -21,45 +21,45 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Care4Brain: Stroke Risk & Brain Health Platform",
-    template: "%s | Care4Brain"
+    default: "Brainwise: Stroke Risk & Brain Health Platform",
+    template: "%s | Brainwise"
   },
   description: "A comprehensive platform for stroke risk assessment and brain health optimization with interactive tools and AI-powered analysis",
   keywords: ["brain health", "stroke risk", "cognitive assessment", "brain training", "AI health", "MRI analysis", "Alzheimer's detection"],
-  authors: [{ name: "Care4Brain Team" }],
-  creator: "Care4Brain",
-  publisher: "Care4Brain",
-  metadataBase: new URL("https://care4brain.pro"),
+  authors: [{ name: "Brainwise Team" }],
+  creator: "Brainwise",
+  publisher: "Brainwise",
+  metadataBase: new URL("https://brainwise.com"),
   alternates: {
-    canonical: "https://care4brain.pro",
+    canonical: "https://brainwise.com",
   },
   manifest: "/site.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Care4Brain",
+    title: "Brainwise",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://care4brain.pro",
-    title: "Care4Brain: Complete Brain Health Toolkit",
+    url: "https://brainwise.com",
+    title: "Brainwise: Complete Brain Health Toolkit",
     description: "Train, assess, and optimize your brain health with our comprehensive suite of cognitive tools",
-    siteName: "Care4Brain",
+    siteName: "Brainwise",
     images: [
       {
         url: "/brain-hero.png",
         width: 1200,
         height: 630,
-        alt: "Care4Brain - Complete Brain Health Toolkit"
+        alt: "Brainwise - Complete Brain Health Toolkit"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Care4Brain: Complete Brain Health Toolkit",
+    title: "Brainwise: Complete Brain Health Toolkit",
     description: "Train, assess, and optimize your brain health with our comprehensive suite of cognitive tools",
-    creator: "@care4brain",
+    creator: "@brainwise",
     images: ["/brain-hero.png"]
   },
   robots: {
@@ -128,6 +128,12 @@ export default function RootLayout({
     >
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
+          <a 
+            href="#main-content" 
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-background focus:text-foreground"
+          >
+            Skip to main content
+          </a>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -136,14 +142,14 @@ export default function RootLayout({
           >
             <div className="flex min-h-screen flex-col">
               <Navbar />
-              <main className="flex-1">{children}</main>
+              <main id="main-content" className="flex-1">{children}</main>
               <footer className="border-t py-12 md:py-8">
                 <div className="container px-4 mx-auto">
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-1">
                       <Link href="/" className="flex items-center gap-2 mb-4">
                         <Brain className="h-6 w-6 text-primary" />
-                        <span className="font-bold">Care4Brain</span>
+                        <span className="font-bold">Brainwise</span>
                       </Link>
                       <p className="text-sm text-muted-foreground">
                         A comprehensive platform for stroke risk assessment and brain health optimization.

@@ -10,30 +10,32 @@ import { VerbalFluencyTest } from "@/components/verbal-fluency-test";
 import { PatternRecognitionTest } from "@/components/pattern-recognition-test";
 import { MathChallenge } from "@/components/math-challenge";
 import { StroopTest } from "@/components/stroop-test";
-// Removed unused cognitive game imports - these components are not rendered on this page yet
+import { DualNBack } from "@/components/dual-n-back";
+import { ColorMatch } from "@/components/color-match";
+import { SimonSays } from "@/components/simon-says";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cognitive Games | Care4Brain",
+  title: "Cognitive Games | Brainwise",
   description: "Improve your memory, attention, and processing speed with our scientifically designed cognitive games.",
   keywords: "cognitive games, brain training, memory games, attention exercises, processing speed, brain health",
   openGraph: {
-    title: "Brain Training Games | Care4Brain",
+    title: "Brain Training Games | Brainwise",
     description: "Enhance your cognitive abilities with fun, interactive games designed to improve memory, attention, and processing speed.",
-    url: "https://care4brain.com/cognitive-games",
+    url: "https://brainwise.com/cognitive-games",
     type: "website",
     images: [
       {
         url: "/images/og-cognitive-games.jpg",
         width: 1200,
         height: 630,
-        alt: "Care4Brain Cognitive Games"
+        alt: "Brainwise Cognitive Games"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brain Training Games | Care4Brain",
+    title: "Brain Training Games | Brainwise",
     description: "Enhance your cognitive abilities with fun, interactive games designed to improve memory, attention, and processing speed.",
     images: ["/images/og-cognitive-games.jpg"]
   }
@@ -117,6 +119,24 @@ export default function CognitiveGamesPage() {
         <TabsContent value="stroop-test" className="mt-0">
           <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
             <StroopTest />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="dual-n-back" className="mt-0">
+          <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
+            <DualNBack />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="color-match" className="mt-0">
+          <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
+            <ColorMatch />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="simon-says" className="mt-0">
+          <div className="bg-card rounded-lg p-3 sm:p-4 md:p-6">
+            <SimonSays />
           </div>
         </TabsContent>
       </Tabs>

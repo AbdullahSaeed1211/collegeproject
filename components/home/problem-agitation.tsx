@@ -23,7 +23,10 @@ const PAIN_POINTS = [
 
 export function ProblemAgitation() {
   return (
-    <section className="py-20 md:py-28 px-4 md:px-6 bg-gradient-to-b from-background to-muted/30">
+    <section 
+      className="py-20 md:py-28 px-4 md:px-6 bg-gradient-to-b from-background to-muted/30"
+      aria-labelledby="problem-agitation-heading"
+    >
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +35,7 @@ export function ProblemAgitation() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 id="problem-agitation-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             Sound Familiar?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -42,7 +45,7 @@ export function ProblemAgitation() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {PAIN_POINTS.map((pain, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +66,7 @@ export function ProblemAgitation() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 
