@@ -1,6 +1,6 @@
 # Care4Brain
 
-Brainwise is a comprehensive web application designed to help users with brain health monitoring, stroke prediction, and cognitive enhancement through health tracking, personalized goals, and educational resources.
+Care4Brain is a comprehensive web application designed to help users with brain health monitoring, stroke prediction, and cognitive enhancement through health tracking, personalized goals, and educational resources.
 
 ## 🧠 Features
 
@@ -12,7 +12,6 @@ Brainwise is a comprehensive web application designed to help users with brain h
 - **Cognitive Training Tools**: Interactive games and exercises for brain health improvement (Memory, Focus, Mental Speed)
 - **Data Visualization**: View your progress through interactive charts and visualizations
 - **Problem Agitation**: Targeted sections highlighting cognitive pain points to drive engagement
-- **Brainwise** -> **Care4Brain** - project rename reverted due to trademark issue
 
 ## 🚀 Getting Started
 
@@ -29,8 +28,8 @@ Brainwise is a comprehensive web application designed to help users with brain h
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/AbdullahSaeed1211/care4brain.git
-   cd care4brain
+   git clone https://github.com/AbdullahSaeed1211/brainwise.git
+   cd brainwise
    ```
 
 2. Install dependencies
@@ -146,7 +145,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📱 Contact
 
-Project Link: [https://github.com/AbdullahSaeed1211/care4brain](https://github.com/AbdullahSaeed1211/care4brain)
+Project Link: [https://github.com/AbdullahSaeed1211/brainwise](https://github.com/AbdullahSaeed1211/brainwise)
 
 ## 🙏 Acknowledgements
 
